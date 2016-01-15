@@ -1,0 +1,559 @@
+<Solution>
+  <PropertyGroup Name="DesertTour" Version="2.3.3.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="DesertUI">
+          <Folder Name="home">
+            <Image Name="btn_help0001.png" />
+            <Image Name="btn_help0002.png" />
+            <Image Name="btn_start0001.png" />
+            <Image Name="btn_start0002.png" />
+            <Image Name="home1.png" />
+            <Image Name="home3.png.png" />
+            <Image Name="homebg.png" />
+          </Folder>
+          <Folder Name="selectlevel">
+            <Image Name="btn_selectlevel0001.png" />
+            <Image Name="btn_selectlevel0002.png" />
+            <Image Name="btn_selectlevel0003.png" />
+            <Image Name="img_levelbg.png" />
+            <Image Name="img_selectstar.png" />
+            <Image Name="nober.png" />
+            <Image Name="firepage.png" />
+            <Image Name="firepagex.png" />
+          </Folder>
+          <Folder Name="help">
+            <Image Name="helpbg.png" />
+            <Image Name="helppagebg.png" />
+            <Image Name="btn_help_s0001.png" />
+            <Image Name="btn_help_s0002.png" />
+            <Image Name="btn_help_colse0001.png" />
+            <Image Name="btn_help_colse0002 09-49-46-367.png" />
+          </Folder>
+          <Folder Name="MainUI">
+            <Image Name="btn_mainui_confirm0001.png" />
+            <Image Name="btn_mainui_confirm0002.png" />
+            <Image Name="btn_mainui_confirm0003.png" />
+            <Image Name="img_fil.png" />
+            <Image Name="img_gameover_bg.png" />
+            <Image Name="img_gemewin_bg.png" />
+            <Image Name="img_maincarbody.png" />
+            <Image Name="img_maincar_d.png" />
+            <Image Name="img_maincar_x.png" />
+            <Image Name="img_mainui_star.png" />
+            <Image Name="img_pas.png" />
+            <Image Name="img_questionbg.png" />
+            <Image Name="btn_mainui_addspeed0001.png" />
+            <Image Name="btn_mainui_addspeed0002.png" />
+            <Image Name="btn_mainui_addspeed0003.png" />
+            <Image Name="btn_mainui_next0001.png" />
+            <Image Name="btn_mainui_next0002.png" />
+            <Image Name="btn_mainui_restart0001.png" />
+            <Image Name="btn_mainui_restart0002.png" />
+            <Image Name="btn_mainui_tolevel0001.png" />
+            <Image Name="btn_mainui_tolevel0002.png" />
+            <Image Name="btn_rota0001.png" />
+            <Image Name="btn_rota0002.png" />
+            <Image Name="mask.png" />
+            <Image Name="img_k.png" />
+          </Folder>
+          <Folder Name="Level">
+            <Folder Name="level_1">
+              <Folder Name="animtion">
+                <Folder Name="dim">
+                  <Image Name="anim_di0001.png" />
+                  <Image Name="anim_di0002.png" />
+                  <Image Name="anim_di0003.png" />
+                  <Image Name="anim_di0004.png" />
+                  <Image Name="anim_di0005.png" />
+                  <Image Name="anim_di0006.png" />
+                </Folder>
+                <Folder Name="guaiwu_an">
+                  <Image Name="anim_guaiwu_zo0001.png" />
+                  <Image Name="anim_guaiwu_zo0002.png" />
+                  <Image Name="anim_guaiwu_zo0003.png" />
+                  <Image Name="anim_guaiwu_zo0004.png" />
+                  <Image Name="anim_guaiwu_zo0005.png" />
+                  <Image Name="anim_guaiwu_zo0006.png" />
+                  <Image Name="anim_guaiwu_zo0007.png" />
+                  <Image Name="anim_guaiwu_zo0008.png" />
+                </Folder>
+                <Folder Name="guangwu">
+                  <Image Name="anim_guaiwu0001.png" />
+                  <Image Name="anim_guaiwu0002.png" />
+                  <Image Name="anim_guaiwu0003.png" />
+                  <Image Name="anim_guaiwu0004.png" />
+                  <Image Name="anim_guaiwu0005.png" />
+                  <Image Name="anim_guaiwu0006.png" />
+                  <Image Name="anim_guaiwu0007.png" />
+                  <Image Name="anim_guaiwu0008.png" />
+                  <Image Name="anim_guaiwu0009.png" />
+                  <Image Name="anim_guaiwu0010.png" />
+                  <Image Name="anim_guaiwu0011.png" />
+                  <Image Name="anim_guaiwu0012.png" />
+                </Folder>
+                <Folder Name="kill">
+                  <Image Name="gauwi0001.png" />
+                  <Image Name="gauwi0002.png" />
+                  <Image Name="gauwi0003.png" />
+                  <Image Name="gauwi0004.png" />
+                  <Image Name="gauwi0005.png" />
+                  <Image Name="gauwi0006.png" />
+                  <Image Name="gauwi0007.png" />
+                  <Image Name="gauwi0008.png" />
+                  <Image Name="gauwi0009.png" />
+                  <Image Name="gauwi0010.png" />
+                  <Image Name="gauwi0011.png" />
+                  <Image Name="gauwi0012.png" />
+                  <Image Name="gauwi0013.png" />
+                  <Image Name="gauwi0014.png" />
+                  <Image Name="gauwi0015.png" />
+                  <Image Name="gauwi0016.png" />
+                  <Image Name="gauwi0017.png" />
+                  <Image Name="gauwi0018.png" />
+                  <Image Name="gauwi0019.png" />
+                  <Image Name="gauwi0020.png" />
+                  <Image Name="gauwi0021.png" />
+                  <Image Name="gauwi0022.png" />
+                  <Image Name="gauwi0023.png" />
+                </Folder>
+                <Folder Name="question">
+                  <Image Name="anim_question0001.png" />
+                  <Image Name="anim_question0002.png" />
+                  <Image Name="anim_question0003.png" />
+                  <Image Name="anim_question0004.png" />
+                  <Image Name="anim_question0005.png" />
+                  <Image Name="anim_question0006.png" />
+                  <Image Name="anim_question0007.png" />
+                  <Image Name="anim_question0008.png" />
+                  <Image Name="anim_question0009.png" />
+                  <Image Name="anim_question0010.png" />
+                </Folder>
+              </Folder>
+              <Image Name="btn_010001.png" />
+              <Image Name="btn_010002.png" />
+              <Image Name="img_bg_1.png" />
+              <Image Name="img_ground_01.png" />
+              <Image Name="img_ground_02.png" />
+              <Image Name="img_next.png" />
+              <Image Name="move_a1.png" />
+              <Image Name="tur0001.png" />
+              <Image Name="tur0002.png" />
+              <Image Name="anim_di0001.png" />
+            </Folder>
+            <Folder Name="level_2">
+              <Folder Name="animation">
+                <Image Name="anim_huo0001.png" />
+                <Image Name="anim_huo0002.png" />
+                <Image Name="anim_huo0003.png" />
+                <Image Name="anim_huo0004.png" />
+                <Image Name="anim_huo0005.png" />
+                <Image Name="anim_huo0006.png" />
+                <Image Name="anim_huo0007.png" />
+                <Image Name="anim_huo0008.png" />
+                <Image Name="anim_huo0009.png" />
+                <Image Name="anim_huo0010.png" />
+                <Image Name="anim_huo0011.png" />
+                <Image Name="anim_huo0012.png" />
+                <Folder Name="bombs">
+                  <Image Name="bomb0001.png" />
+                  <Image Name="bomb0002.png" />
+                  <Image Name="bomb0003.png" />
+                  <Image Name="bomb0004.png" />
+                  <Image Name="bomb0005.png" />
+                  <Image Name="bomb0006.png" />
+                  <Image Name="bomb0007.png" />
+                  <Image Name="bomb0008.png" />
+                  <Image Name="bomb0009.png" />
+                  <Image Name="bomb0010.png" />
+                  <Image Name="bomb0011.png" />
+                  <Image Name="bomb0012.png" />
+                  <Image Name="bomb0013.png" />
+                  <Image Name="bomb0014.png" />
+                  <Image Name="bomb0015.png" />
+                  <Image Name="bomb0016.png" />
+                </Folder>
+                <Folder Name="eat">
+                  <Image Name="eat0001.png" />
+                  <Image Name="eat0002.png" />
+                  <Image Name="eat0003.png" />
+                  <Image Name="eat0004.png" />
+                  <Image Name="eat0005.png" />
+                  <Image Name="eat0006.png" />
+                  <Image Name="eat0007.png" />
+                  <Image Name="eat0008.png" />
+                  <Image Name="eat0009.png" />
+                  <Image Name="eat0010.png" />
+                  <Image Name="eat0011.png" />
+                  <Image Name="eat0012.png" />
+                  <Image Name="eat0013.png" />
+                  <Image Name="eat0014.png" />
+                </Folder>
+                <Image Name="anim_huo0013.png" />
+                <Folder Name="gound">
+                  <Image Name="sfs0001.png" />
+                  <Image Name="sfs0002.png" />
+                  <Image Name="sfs0003.png" />
+                  <Image Name="sfs0004.png" />
+                  <Image Name="sfs0005.png" />
+                  <Image Name="sfs0006.png" />
+                </Folder>
+                <Folder Name="bomb02">
+                  <Image Name="sax0001.png" />
+                  <Image Name="sax0002.png" />
+                  <Image Name="sax0003.png" />
+                  <Image Name="sax0004.png" />
+                  <Image Name="sax0005.png" />
+                  <Image Name="sax0006.png" />
+                  <Image Name="sax0007.png" />
+                  <Image Name="sax0008.png" />
+                  <Image Name="sax0009.png" />
+                  <Image Name="sax0010.png" />
+                  <Image Name="sax0011.png" />
+                  <Image Name="sax0012.png" />
+                  <Image Name="sax0013.png" />
+                  <Image Name="sax0014.png" />
+                  <Image Name="sax0015.png" />
+                  <Image Name="sax0016.png" />
+                  <Image Name="sax0017.png" />
+                  <Image Name="sax0018.png" />
+                  <Image Name="sax0019.png" />
+                  <Image Name="sax0020.png" />
+                  <Image Name="sax0021.png" />
+                  <Image Name="sax0022.png" />
+                  <Image Name="sax0023.png" />
+                  <Image Name="sax0024.png" />
+                </Folder>
+                <Folder Name="jsfirekill">
+                  <Image Name="jsfire0001.png" />
+                  <Image Name="jsfire0002.png" />
+                  <Image Name="jsfire0003.png" />
+                  <Image Name="jsfire0004.png" />
+                  <Image Name="jsfire0005.png" />
+                </Folder>
+              </Folder>
+              <Image Name="btn_dicar0001.png" />
+              <Image Name="btn_dicar0002.png" />
+              <Image Name="img_ground_02.png" />
+              <Image Name="img_ground_03.png" />
+              <Image Name="img_ground_04.png" />
+              <Image Name="img_ground_05.png" />
+              <Image Name="img_ground_06.png" />
+              <Image Name="img_sc_01.png" />
+              <Image Name="img_sc_02.png.png" />
+              <Image Name="img_sc_03.png" />
+              <Image Name="s.png" />
+              <Image Name="s22.png" />
+              <Image Name="s23.png" />
+            </Folder>
+            <Folder Name="level_3">
+              <Image Name="b1.png" />
+              <Image Name="di1.png" />
+              <Image Name="di2.png" />
+              <Image Name="di3.png" />
+              <Image Name="di4.png" />
+              <Folder Name="animation">
+                <Image Name="dq0001.png" />
+                <Image Name="dq0002.png" />
+                <Image Name="dq0003.png" />
+                <Image Name="dq0004.png" />
+                <Image Name="dq0005.png" />
+                <Image Name="dq0006.png" />
+                <Image Name="dq0007.png" />
+                <Image Name="dq0008.png" />
+                <Image Name="dq0009.png" />
+                <Image Name="dq0010.png" />
+                <Image Name="dq0011.png" />
+                <Image Name="dq0012.png" />
+                <Image Name="dq0013.png" />
+                <Image Name="dq0014.png" />
+                <Image Name="dq0015.png" />
+                <Image Name="dq0016.png" />
+                <Image Name="dq0017.png" />
+                <Image Name="dq0018.png" />
+                <Image Name="dq0019.png" />
+                <Image Name="dq0020.png" />
+                <Image Name="dq0021.png" />
+                <Image Name="dq0022.png" />
+                <Image Name="dq0023.png" />
+                <Image Name="dq0024.png" />
+                <Image Name="dq0025.png" />
+                <Image Name="dq0026.png" />
+                <Image Name="dq0027.png" />
+                <Image Name="dq0028.png" />
+                <Image Name="dq0029.png" />
+                <Image Name="dq0030.png" />
+              </Folder>
+            </Folder>
+            <Folder Name="level_4">
+              <Image Name="td1.png" />
+              <Image Name="td2.png" />
+              <Image Name="td3.png" />
+              <Image Name="td4.png" />
+              <Image Name="td5.png" />
+              <Image Name="td6.png" />
+            </Folder>
+            <Folder Name="level_5">
+              <Image Name="d1.png" />
+              <Image Name="d2.png.png" />
+              <Image Name="d3.png" />
+              <Image Name="monster.png" />
+              <Image Name="d4.png" />
+              <Image Name="monsterup.png" />
+              <Image Name="move.png" />
+              <Folder Name="animation">
+                <Image Name="animup0001.png" />
+                <Image Name="animup0002.png" />
+                <Image Name="animup0003.png" />
+                <Image Name="animup0004.png" />
+                <Image Name="animup0005.png" />
+                <Image Name="animup0006.png" />
+                <Image Name="animup0007.png" />
+              </Folder>
+            </Folder>
+            <Folder Name="level_10">
+              <Folder Name="animtion">
+                <Image Name="asf0001.png" />
+                <Image Name="asf0002.png" />
+                <Image Name="asf0003.png" />
+                <Image Name="asf0004.png" />
+                <Image Name="asf0005.png" />
+                <Image Name="asf0006.png" />
+                <Image Name="asf0007.png" />
+                <Image Name="asf0008.png" />
+                <Image Name="sfff0001.png" />
+                <Image Name="sfff0002.png" />
+                <Image Name="sfff0003.png" />
+                <Image Name="sfff0004.png" />
+                <Image Name="sfff0005.png" />
+                <Image Name="sfff0006.png" />
+                <Image Name="sfff0007.png" />
+              </Folder>
+              <Image Name="l10_ground_1.png" />
+              <Image Name="l10_ground_2.png" />
+              <Image Name="l10_ground_3.png" />
+              <Image Name="l10_ground_4.png" />
+            </Folder>
+            <Folder Name="level_6">
+              <Image Name="gound_1.png" />
+              <Image Name="gound_2.png" />
+              <Image Name="gound_3.png" />
+              <Image Name="gound_4.png" />
+              <Image Name="gound_5.png" />
+              <Image Name="gound_6.png" />
+              <Image Name="btn_b0001.png" />
+              <Image Name="btn_b0002.png" />
+              <Image Name="btn_g0001.png" />
+              <Image Name="btn_g0002.png" />
+              <Image Name="btn_o0001.png" />
+              <Image Name="btn_o0002.png" />
+              <Image Name="btn_r0001.png" />
+              <Image Name="btn_r0002.png" />
+              <Image Name="gound_7.png" />
+              <Image Name="sgf0001.png" />
+              <Image Name="sgf0002.png" />
+              <Image Name="ar.png" />
+            </Folder>
+            <Folder Name="level_7">
+              <Folder Name="animation">
+                <Image Name="af0001.png" />
+                <Image Name="af0002.png" />
+                <Image Name="af0003.png" />
+                <Image Name="af0004.png" />
+                <Image Name="btnopen0001.png" />
+                <Image Name="btnopen0002.png" />
+                <Image Name="btnrl0001.png" />
+                <Image Name="btnrl0002.png" />
+                <Image Name="l7_gound_8.png" />
+                <Image Name="saf0001.png" />
+                <Image Name="saf0002.png" />
+                <Image Name="saf0003.png" />
+                <Image Name="saf0004.png" />
+                <Image Name="saf0005.png" />
+                <Image Name="saf0006.png" />
+                <Image Name="saf0007.png" />
+                <Folder Name="anim_gw">
+                  <Image Name="gw0001.png" />
+                  <Image Name="gw0002.png" />
+                  <Image Name="gw0003.png" />
+                  <Image Name="gw0004.png" />
+                  <Image Name="gw0005.png" />
+                  <Image Name="gw0006.png" />
+                  <Image Name="gw0007.png" />
+                  <Image Name="gw0008.png" />
+                  <Image Name="gw0009.png" />
+                  <Image Name="gw0010.png" />
+                  <Image Name="gw0011.png" />
+                  <Image Name="gw0012.png" />
+                  <Image Name="gw0013.png" />
+                  <Image Name="gw0014.png" />
+                  <Image Name="gw0015.png" />
+                  <Image Name="gw0016.png" />
+                  <Image Name="gw0017.png" />
+                  <Image Name="gw0018.png" />
+                  <Image Name="gw0019.png" />
+                  <Image Name="gw0020.png" />
+                  <Image Name="gw0021.png" />
+                </Folder>
+              </Folder>
+              <Image Name="l7_gound_1.png.png" />
+              <Image Name="l7_gound_2.png" />
+              <Image Name="l7_gound_3.png" />
+              <Image Name="l7_gound_4.png" />
+              <Image Name="l7_gound_5.png" />
+              <Image Name="l7_gound_6.png" />
+              <Image Name="l7_gound_7.png" />
+            </Folder>
+            <Folder Name="level_8">
+              <Folder Name="animation">
+                <Image Name="l8_gound_4.png" />
+                <Image Name="sgh0001.png" />
+                <Image Name="sgh0002.png" />
+                <Image Name="sgh0003.png" />
+                <Image Name="sgh0004.png" />
+                <Image Name="sgh0005.png" />
+                <Image Name="sgh0006.png" />
+                <Image Name="sgh0007.png" />
+                <Image Name="sgh0008.png" />
+              </Folder>
+              <Image Name="btn_fire0001.png" />
+              <Image Name="btn_fire0002.png" />
+              <Image Name="l8_gound_1.png" />
+              <Image Name="l8_gound_2.png" />
+              <Image Name="l8_gound_3.png" />
+            </Folder>
+            <Folder Name="level_9">
+              <Folder Name="animation">
+                <Image Name="asf0001.png" />
+                <Image Name="asf0002.png" />
+                <Image Name="asf0003.png" />
+                <Image Name="asf0004.png" />
+                <Image Name="asf0005.png" />
+                <Image Name="asf0006.png" />
+              </Folder>
+              <Image Name="l9_gound_1.png" />
+              <Image Name="l9_gound_2.png" />
+              <Image Name="l9_gound_3.png" />
+              <Image Name="l9_gound_4.png" />
+              <Image Name="l9_gound_5.png" />
+              <Image Name="l9_gound_6.png" />
+              <Image Name="l9_gound_7.png" />
+            </Folder>
+          </Folder>
+        </Folder>
+        <Folder Name="Node">
+          <Folder Name="animation">
+            <Project Name="fire_x.csd" Type="Node" />
+            <Project Name="fire_xx.csd" Type="Node" />
+            <Project Name="guaiwujs.csd" Type="Node" />
+            <Project Name="L2_fire.csd" Type="Node" />
+            <Project Name="bomb.csd" Type="Node" />
+            <Project Name="L3_e.csd" Type="Node" />
+            <Project Name="anim_Archery.csd" Type="Node" />
+          </Folder>
+          <Folder Name="level_animation">
+            <Project Name="yuan.csd" Type="Node" />
+            <Project Name="l2_gound.csd" Type="Node" />
+            <Project Name="l5_updown.csd" Type="Node" />
+            <Project Name="l7_gw.csd" Type="Node" />
+          </Folder>
+          <Folder Name="uianimtion">
+            <Project Name="questionselect.csd" Type="Node" />
+          </Folder>
+          <Folder Name="KillAnimaion">
+            <Project Name="L1_js.csd" Type="Node" />
+            <Project Name="carfirekill.csd" Type="Node" />
+            <Project Name="L5_upkill.csd" Type="Node" />
+          </Folder>
+        </Folder>
+        <Folder Name="LayerUI">
+          <Project Name="node_selectlevel.csd" Type="Node" />
+          <Project Name="MainUI.csd" Type="Layer" />
+          <Project Name="MainCar.csd" Type="Layer" />
+          <Project Name="btn_UI_question.csd" Type="Layer" />
+          <Project Name="btn_standard.csd" Type="Layer" />
+          <Folder Name="Other">
+            <Project Name="fire_x.csd" Type="Layer" />
+            <Project Name="guaiwu.csd" Type="Layer" />
+            <Project Name="xuanfu.csd" Type="Layer" />
+            <Project Name="Spring.csd" Type="Layer" />
+          </Folder>
+          <Project Name="MaskLayer.csd" Type="Layer" />
+          <Project Name="MainCar_L.csd" Type="Layer" />
+          <Project Name="MainCar_0.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="Scene">
+          <Project Name="Desert_help.csd" Type="Scene" />
+          <Project Name="Desert_home.csd" Type="Scene" />
+          <Project Name="Desert_level.csd" Type="Scene" />
+          <Folder Name="LevelScene">
+            <Project Name="Level_1.csd" Type="Scene" />
+            <Project Name="Level_2.csd" Type="Scene" />
+            <Project Name="Level_3.csd" Type="Scene" />
+            <Project Name="Level_4.csd" Type="Scene" />
+            <Project Name="Level_5.csd" Type="Scene" />
+            <Project Name="Level_6.csd" Type="Scene" />
+            <Project Name="Level_7.csd" Type="Scene" />
+            <Project Name="Level_8.csd" Type="Scene" />
+            <Project Name="Level_9.csd" Type="Scene" />
+            <Project Name="Level_10.csd" Type="Scene" />
+          </Folder>
+        </Folder>
+        <Folder Name="animtion">
+          <Folder Name="firekill">
+            <Image Name="firekill0001.png" />
+            <Image Name="firekill0002.png" />
+            <Image Name="firekill0003.png" />
+            <Image Name="firekill0004.png" />
+            <Image Name="firekill0005.png" />
+            <Image Name="firekill0006.png" />
+            <Image Name="firekill0007.png" />
+            <Image Name="firekill0008.png" />
+            <Image Name="firekill0009.png" />
+            <Image Name="firekill0010.png" />
+            <Image Name="firekill0011.png" />
+            <Image Name="firekill0012.png" />
+            <Image Name="firekill0013.png" />
+            <Image Name="firekill0014.png" />
+            <Image Name="firekill0015.png" />
+            <Image Name="firekill0016.png" />
+            <Image Name="firekill0017.png" />
+            <Image Name="firekill0018.png" />
+          </Folder>
+          <Folder Name="fire_x">
+            <Image Name="firex10001.png" />
+            <Image Name="firex10002.png" />
+            <Image Name="firex10003.png" />
+            <Image Name="firex10004.png" />
+            <Image Name="firex10005.png" />
+            <Image Name="firex10006.png" />
+            <Image Name="firex10007.png" />
+            <Image Name="firex10008.png" />
+            <Image Name="firex10009.png" />
+            <Image Name="firex10010.png" />
+            <Image Name="firex10011.png" />
+            <Image Name="firex10012.png" />
+          </Folder>
+          <Folder Name="fire_x1">
+            <Image Name="firex0001.png" />
+            <Image Name="firex0002.png" />
+            <Image Name="firex0003.png" />
+            <Image Name="firex0004.png" />
+            <Image Name="firex0005.png" />
+            <Image Name="firex0006.png" />
+            <Image Name="firex0007.png" />
+            <Image Name="firex0008.png" />
+            <Image Name="firex0009.png" />
+            <Image Name="firex0010.png" />
+            <Image Name="firex0011.png" />
+            <Image Name="firex0012.png" />
+          </Folder>
+        </Folder>
+        <Folder Name="Effect">
+          <PlistParticleFile Name="Radio.plist" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
