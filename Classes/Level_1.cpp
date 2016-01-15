@@ -27,20 +27,15 @@ Scene* Level_1::createScene()
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
     scene->setName("level_1");
-    
-    
     /** 吧物理世界设置成式调模式
      *  @2015/12/16 11:15
      */
     //scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-    
     scene->getPhysicsWorld()->setGravity(Vec2(0 , -800.0f));
-    
     // 'layer' is an autorelease object
     auto layer = Level_1::create();
     // add layer as a child to scene
     scene->addChild(layer);
-    
     // return the scene
     return scene;
 }

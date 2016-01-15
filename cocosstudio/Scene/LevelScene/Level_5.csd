@@ -257,13 +257,13 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/animtion/question/anim_question0001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_dicar0001_9" ActionTag="509726013" Tag="601" IconVisible="False" LeftMargin="734.1710" RightMargin="202.8290" TopMargin="192.3861" BottomMargin="385.6139" ctype="SpriteObjectData">
+          <AbstractNodeData Name="btn_dicar0001_9" ActionTag="509726013" Tag="601" IconVisible="False" LeftMargin="811.5118" RightMargin="125.4882" TopMargin="198.4762" BottomMargin="379.5238" ctype="SpriteObjectData">
             <Size X="87.0000" Y="22.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="777.6710" Y="396.6139" />
+            <Position X="855.0118" Y="390.5238" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7594" Y="0.6610" />
+            <PrePosition X="0.8350" Y="0.6509" />
             <PreSize X="0.0850" Y="0.0367" />
             <FileData Type="Normal" Path="DesertUI/Level/level_2/btn_dicar0001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />

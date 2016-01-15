@@ -47,8 +47,6 @@
             <Image Name="btn_mainui_addspeed0001.png" />
             <Image Name="btn_mainui_addspeed0002.png" />
             <Image Name="btn_mainui_addspeed0003.png" />
-            <Image Name="btn_mainui_next0001.png" />
-            <Image Name="btn_mainui_next0002.png" />
             <Image Name="btn_mainui_restart0001.png" />
             <Image Name="btn_mainui_restart0002.png" />
             <Image Name="btn_mainui_tolevel0001.png" />
@@ -57,6 +55,8 @@
             <Image Name="btn_rota0002.png" />
             <Image Name="mask.png" />
             <Image Name="img_k.png" />
+            <Image Name="btn_next0001.png" />
+            <Image Name="btn_next0002.png" />
           </Folder>
           <Folder Name="Level">
             <Folder Name="level_1">

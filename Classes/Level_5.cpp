@@ -131,6 +131,10 @@ bool Level_5::init()
     psworld2->setDynamic(false);
     particle_1->setPhysicsBody(psworld2);
     
+    //添加地面按钮
+    Btn_Ground_1* btngr = Btn_Ground_1::create();
+    btngr->setObj(btngroundl5_2);
+    addChild(btngr);
     
     //创建主要UI界面
     mainui = MainUI::create();
@@ -144,10 +148,7 @@ bool Level_5::init()
     Exit* eit = Exit::create();
     eit->setObj(exitl5);
     addChild(eit);
-    //添加地面按钮
-    Btn_Ground_1* btngr = Btn_Ground_1::create();
-    btngr->setObj(btngroundl5_2);
-    addChild(btngr);
+    
     Btn_QuestionSelect* qbs2 = Btn_QuestionSelect::create();
     qbs2->setObj(questionl4_1);
     qbs2->setIBtnMainUI(mainui, btngr);
@@ -169,10 +170,6 @@ bool Level_5::init()
     qbs4->setIBtnMainUI(mainui, bs3);
     addChild(qbs4,30);
     
-//    //弹簧
-//    objSpring* spr = objSpring::create();
-//    spr->setObj(sprs);
-//    addChild(spr);
     Layer* dlyer = Layer::create();
     dlyer->addChild(groundl5_5);
     addChild(dlyer);

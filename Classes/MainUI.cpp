@@ -28,7 +28,6 @@ bool MainUI::init()
     }
     auto mainui = CSLoader::createNode("LayerUI/MainUI.csb");
     addChild(mainui);
-    
     MainUI::QuestionPage = mainui->getChildByName<Sprite*>(PAGE_QUESTION);
     MainUI::GameVictoryPage = mainui->getChildByName<Sprite*>(PAGE_GAMEWIN);
     MainUI::GameOverPage = mainui->getChildByName<Sprite*>(PAGE_GAMEOVER);
@@ -74,13 +73,10 @@ bool MainUI::init()
     btn_gamevictory_tolevel->addTouchEventListener(CC_CALLBACK_2(MainUI::onBtnClick, this));
     btn_gamevictory_restart->addTouchEventListener(CC_CALLBACK_2(MainUI::onBtnClick, this));
     btn_gamevictory_next->addTouchEventListener(CC_CALLBACK_2(MainUI::onBtnClick, this));
-    
     Button* btn_gameover_tolevel = MainUI::GameOverPage->getChildByName<Button*>(BTN_GAMEOVER_TOLEVEL);
     Button* btn_gameover_restart = MainUI::GameOverPage->getChildByName<Button*>(BTN_GAMEOVER_RESTART);
     btn_gameover_tolevel->addTouchEventListener(CC_CALLBACK_2(MainUI::onBtnClick, this));
     btn_gameover_restart->addTouchEventListener(CC_CALLBACK_2(MainUI::onBtnClick, this));
-    
-    
     //获取遮罩
     masklayer = mainui->getChildByName<Node*>("FileNode_1");
     masklayer->setLocalZOrder(10);
@@ -416,7 +412,6 @@ void MainUI::QuestionActionPlayed(const bool& isquestion,  Btn_QuestionSelect* s
 void MainUI::GameVictoryActionPlayed(bool isgamevictory)
 {
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("AudioAssets/audio_home/audio_gamewin.mp3");
-    //我是新版的
     MainUI::gameVictroy(this->getScene()->getName());
     
     if (MainUI::answerCorrect ==1){

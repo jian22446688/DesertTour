@@ -6,13 +6,13 @@
       <ObjectData Name="Layer" Tag="2035" ctype="GameLayerObjectData">
         <Size X="1024.0000" Y="600.0000" />
         <Children>
-          <AbstractNodeData Name="btn_mainui_addspeed" ActionTag="1453549051" Tag="2037" IconVisible="False" LeftMargin="186.4989" RightMargin="774.5011" TopMargin="519.5007" BottomMargin="17.4993" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_mainui_addspeed" ActionTag="1453549051" Tag="2037" IconVisible="False" LeftMargin="168.9822" RightMargin="792.0178" TopMargin="527.2324" BottomMargin="9.7677" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="63.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="217.9989" Y="48.9993" />
+            <Position X="200.4822" Y="41.2677" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2129" Y="0.0817" />
+            <PrePosition X="0.1958" Y="0.0688" />
             <PreSize X="0.0615" Y="0.1050" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_addspeed0003.png" Plist="" />
@@ -21,13 +21,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_mainui_restart" ActionTag="355544715" Tag="2038" IconVisible="False" LeftMargin="106.4985" RightMargin="854.5015" TopMargin="519.5007" BottomMargin="17.4993" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_mainui_restart" ActionTag="355544715" Tag="2038" IconVisible="False" LeftMargin="90.2172" RightMargin="870.7828" TopMargin="527.2324" BottomMargin="9.7677" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="63.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="137.9985" Y="48.9993" />
+            <Position X="121.7172" Y="41.2677" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1348" Y="0.0817" />
+            <PrePosition X="0.1189" Y="0.0688" />
             <PreSize X="0.0615" Y="0.1050" />
             <TextColor A="255" R="65" G="65" B="70" />
             <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_restart0002.png" Plist="" />
@@ -35,13 +35,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_mainui_tolevel" ActionTag="1194213400" Tag="2039" IconVisible="False" LeftMargin="26.4985" RightMargin="934.5015" TopMargin="519.5007" BottomMargin="17.4993" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_mainui_tolevel" ActionTag="1194213400" Tag="2039" IconVisible="False" LeftMargin="11.4522" RightMargin="949.5479" TopMargin="527.2324" BottomMargin="9.7676" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="63.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="57.9985" Y="48.9993" />
+            <Position X="42.9522" Y="41.2676" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0566" Y="0.0817" />
+            <PrePosition X="0.0419" Y="0.0688" />
             <PreSize X="0.0615" Y="0.1050" />
             <TextColor A="255" R="65" G="65" B="70" />
             <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_tolevel0002.png" Plist="" />
@@ -278,17 +278,17 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_gamewin_next" ActionTag="1188819436" Tag="2058" IconVisible="False" LeftMargin="330.2653" RightMargin="115.7347" TopMargin="413.3023" BottomMargin="60.6977" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="30" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="60.0000" Y="60.0000" />
+              <AbstractNodeData Name="btn_gamewin_next" ActionTag="1188819436" Tag="2058" IconVisible="False" LeftMargin="328.7653" RightMargin="114.2347" TopMargin="411.8023" BottomMargin="59.1977" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="63.0000" Y="63.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="360.2653" Y="90.6977" />
                 <Scale ScaleX="1.3393" ScaleY="1.3393" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7120" Y="0.1698" />
-                <PreSize X="0.1186" Y="0.1124" />
+                <PreSize X="0.1245" Y="0.1180" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_next0002.png" Plist="" />
-                <NormalFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_next0001.png" Plist="" />
+                <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_next0002.png" Plist="" />
+                <NormalFileData Type="Normal" Path="DesertUI/MainUI/btn_next0001.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -357,17 +357,17 @@
             <FileData Type="Normal" Path="DesertUI/MainUI/img_gemewin_bg.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_mainui_carturn" ActionTag="364809698" Tag="387" IconVisible="False" LeftMargin="926.1184" RightMargin="25.8816" TopMargin="17.7324" BottomMargin="510.2676" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="42" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="72.0000" Y="72.0000" />
+          <AbstractNodeData Name="btn_mainui_carturn" ActionTag="364809698" Tag="387" IconVisible="False" LeftMargin="944.9498" RightMargin="16.0502" TopMargin="15.1189" BottomMargin="521.8811" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="63.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="962.1184" Y="546.2676" />
+            <Position X="976.4498" Y="553.3811" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9396" Y="0.9104" />
-            <PreSize X="0.0703" Y="0.1200" />
+            <PrePosition X="0.9536" Y="0.9223" />
+            <PreSize X="0.0615" Y="0.1050" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Normal" Path="DesertUI/MainUI/btn_rota0002.png" Plist="" />
-            <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_rota0002.png" Plist="" />
+            <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_rota0001.png" Plist="" />
             <NormalFileData Type="Normal" Path="DesertUI/MainUI/btn_rota0002.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />

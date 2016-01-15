@@ -104,12 +104,9 @@ void Btn_QuestionSelect::AnswerFinsh(bool& isAnswercorrect)
         
         //TODO 问题回答错误
     }
-    
     //调用接口的方法解锁控制的按钮
-    
     _ibtncontrol->IsBtnEnable(true);
     _ibtncontrol->AnswerPassed(isAnswercorrect);
-    
     this->removeFromParent();
 }
 

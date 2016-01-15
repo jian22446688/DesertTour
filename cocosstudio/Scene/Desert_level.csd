@@ -242,17 +242,17 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Node/animation/fire_xx.csd" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_level_back" ActionTag="1443685402" Tag="2161" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="25.1070" RightMargin="938.8930" TopMargin="520.9567" BottomMargin="19.0433" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="30" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="60.0000" Y="60.0000" />
+          <AbstractNodeData Name="btn_level_back" ActionTag="1443685402" Tag="2161" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="23.6070" RightMargin="937.3930" TopMargin="519.4567" BottomMargin="17.5433" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="33" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="63.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="55.1070" Y="49.0433" />
             <Scale ScaleX="-0.9469" ScaleY="0.9469" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0538" Y="0.0817" />
-            <PreSize X="0.0586" Y="0.1000" />
+            <PreSize X="0.0615" Y="0.1050" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_next0002.png" Plist="" />
-            <NormalFileData Type="Normal" Path="DesertUI/MainUI/btn_mainui_next0001.png" Plist="" />
+            <PressedFileData Type="Normal" Path="DesertUI/MainUI/btn_next0002.png" Plist="" />
+            <NormalFileData Type="Normal" Path="DesertUI/MainUI/btn_next0001.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
