@@ -91,7 +91,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_3/di1.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="FileNode_6" ActionTag="-706941455" Tag="385" IconVisible="True" LeftMargin="312.7331" RightMargin="711.2670" TopMargin="353.7713" BottomMargin="246.2287" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="FileNode_6" ActionTag="-706941455" Tag="385" IconVisible="True" LeftMargin="312.7331" RightMargin="711.2669" TopMargin="353.7713" BottomMargin="246.2287" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="312.7331" Y="246.2287" />
@@ -169,7 +169,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_3/di4.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_010001_25" ActionTag="1377085989" Tag="250" IconVisible="False" LeftMargin="591.7162" RightMargin="380.2838" TopMargin="548.0000" BottomMargin="0.0000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="btn_010001_25" ActionTag="1377085989" Tag="250" IconVisible="False" LeftMargin="591.7162" RightMargin="380.2838" TopMargin="548.0000" ctype="SpriteObjectData">
             <Size X="52.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="617.7162" Y="26.0000" />
@@ -301,7 +301,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="anim_question0001_36_0_0" ActionTag="-563698867" Tag="389" IconVisible="False" LeftMargin="342.0938" RightMargin="612.9063" TopMargin="525.3622" BottomMargin="12.6378" ctype="SpriteObjectData">
+          <AbstractNodeData Name="anim_question0001_36_0_0" ActionTag="-563698867" Tag="389" IconVisible="False" LeftMargin="342.0938" RightMargin="612.9062" TopMargin="525.3622" BottomMargin="12.6378" ctype="SpriteObjectData">
             <Size X="69.0000" Y="62.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="376.5938" Y="43.6378" />

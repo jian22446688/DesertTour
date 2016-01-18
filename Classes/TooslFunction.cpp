@@ -16,10 +16,6 @@ using namespace cocos2d;
 using namespace cocos2d::ui;
 using namespace cocostudio::timeline;
 
-
-
-
-
 /** 设置精灵成刚体
  *  @2015/12/18 19:05
  */

@@ -171,6 +171,78 @@ protected:
 
 
 
+class Scorpion_gw : public cocos2d::Sprite, public IBtnControl
+{
+    enum ScorpionType{
+        Walk,
+        Attack,
+        Sleep,
+    };
+    
+private:
+    
+    bool isMove = false;
+    float movespeed = 0;
+    ActionTimeline* guaiwu;
+    cocos2d::Vec2 moveA;
+    cocos2d::Vec2 moveB;
+    bool iskeyr = false;
+    bool iskeyl = true;
+    Node* animNode;
+    
+    ScorpionType _scorpiontype = Walk;
+    
+public:
+    
+    
+    
+    virtual bool init();
+    
+    virtual void update(float ft);
+    
+    CREATE_FUNC(Scorpion_gw);
+    
+    void setObj(Node* obj);
+    
+    /** 设置移动范围
+     *  @2015/01/15 11:20
+     */
+    void setMovePosition(Node* objeA,Node* objeB,float movespeed);
+    
+    /** 更换状态
+     *  @2015/01/15 09:40
+     */
+    void ChangeStatus(ScorpionType type);
+    
+    /** 问题回答
+     *  @2015/01/15 09:40
+     */
+    virtual void AnswerPassed(bool ispass);
+    
+    /** 控制的按钮是否启用
+     *  @2015/01/15 09:40
+     */
+    virtual void IsBtnEnable(bool isbtn);
+    
+    /** 碰撞开始事件
+     *  @2015/01/15 09:40
+     */
+    bool onCollisionBegin(const cocos2d::PhysicsContact& contact);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+};
 
 
 

@@ -97,6 +97,7 @@ bool MainUI::init()
         carSpeed_x = CAR_SPEED_X;
         carSpeed_d = CAR_SPEED_D;
     }
+    scheduleUpdate();
     return true;
 }
 
@@ -127,6 +128,18 @@ void MainUI::onEnter()
     MainUI::setShow(false);
 }
 
+
+void MainUI::update(float ft)
+{
+    if (_ismove) {
+        if (getCar_R()->getCarNode()->getPosition().x >= _nodePos->getPosition().x) {
+            getCar_R()->setObj(_movePos);
+            log(" UI 1-> UIX:%f UIY:%f",getCar_R()->getCarNode()->getPosition().x,getCar_R()->getCarNode()->getPosition().y);
+            log(" UI 2-> UIX:%f UIY:%f",_nodePos->getPosition().x,_nodePos->getPosition().y);
+            _ismove = false;
+        }
+    }
+}
 
 
 template <class T>
@@ -796,6 +809,15 @@ bool MainUI::isGameOver()
     return MainUI::isGameOverPlayAction;
 }
 
+/** 获取是否死亡
+ *  @2015/01/15 14:28
+ */
+void MainUI::setMovePosition(Node* nodeA, Node* nodeB,bool ism)
+{
+    _nodePos = nodeA;
+    _movePos = nodeB;
+    _ismove = ism;
+}
 
 /***************************************遮罩层**************************************/
 

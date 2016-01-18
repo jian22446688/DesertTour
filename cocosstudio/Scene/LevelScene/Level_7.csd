@@ -94,11 +94,11 @@
           </AbstractNodeData>
           <AbstractNodeData Name="l7_gound_5" ActionTag="1804284772" Tag="786" IconVisible="False" LeftMargin="422.9063" RightMargin="456.0937" TopMargin="209.6056" BottomMargin="246.3944" ctype="SpriteObjectData">
             <Size X="145.0000" Y="144.0000" />
-            <AnchorPoint ScaleX="0.5005" />
-            <Position X="495.4788" Y="246.3944" />
+            <AnchorPoint />
+            <Position X="422.9063" Y="246.3944" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4839" Y="0.4107" />
+            <PrePosition X="0.4130" Y="0.4107" />
             <PreSize X="0.1416" Y="0.2400" />
             <FileData Type="Normal" Path="DesertUI/Level/level_7/l7_gound_6.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -228,24 +228,13 @@
             <FileData Type="Normal" Path="DesertUI/MainUI/img_maincarbody.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_1" ActionTag="664752816" Tag="884" IconVisible="False" LeftMargin="261.7004" RightMargin="710.2996" TopMargin="39.4862" BottomMargin="508.5138" ctype="SpriteObjectData">
-            <Size X="52.0000" Y="52.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="287.7004" Y="534.5138" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2810" Y="0.8909" />
-            <PreSize X="0.0508" Y="0.0867" />
-            <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="question_1" ActionTag="-1640670397" Tag="885" IconVisible="False" LeftMargin="330.7483" RightMargin="624.2517" TopMargin="30.0781" BottomMargin="507.9219" ctype="SpriteObjectData">
+          <AbstractNodeData Name="question_1" ActionTag="-1640670397" Tag="885" IconVisible="False" LeftMargin="671.1986" RightMargin="283.8014" TopMargin="-0.0312" BottomMargin="538.0312" ctype="SpriteObjectData">
             <Size X="69.0000" Y="62.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="365.2483" Y="538.9219" />
+            <Position X="705.6986" Y="569.0312" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3567" Y="0.8982" />
+            <PrePosition X="0.6892" Y="0.9484" />
             <PreSize X="0.0674" Y="0.1033" />
             <FileData Type="Normal" Path="DesertUI/Level/level_1/animtion/question/anim_question0001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -298,13 +287,13 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/animtion/question/anim_question0001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_1_0" ActionTag="1668242291" Tag="1434" IconVisible="False" LeftMargin="591.1349" RightMargin="380.8651" TopMargin="112.2147" BottomMargin="435.7853" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Button_1_0" ActionTag="1668242291" Tag="1434" IconVisible="False" LeftMargin="1115.6006" RightMargin="-143.6006" TopMargin="99.7267" BottomMargin="448.2733" ctype="SpriteObjectData">
             <Size X="52.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="617.1349" Y="461.7853" />
+            <Position X="1141.6006" Y="474.2733" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6027" Y="0.7696" />
+            <PrePosition X="1.1148" Y="0.7905" />
             <PreSize X="0.0508" Y="0.0867" />
             <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
@@ -320,15 +309,38 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="FileNode_1" ActionTag="1238057325" Tag="89" IconVisible="True" LeftMargin="832.0000" RightMargin="192.0000" TopMargin="49.0000" BottomMargin="551.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
-            <Size X="0.0000" Y="0.0000" />
-            <AnchorPoint />
-            <Position X="832.0000" Y="551.0000" />
+          <AbstractNodeData Name="Button_1_1" ActionTag="-887275715" Tag="541" IconVisible="False" LeftMargin="392.6508" RightMargin="579.3492" TopMargin="79.5785" BottomMargin="468.4215" ctype="SpriteObjectData">
+            <Size X="52.0000" Y="52.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="418.6508" Y="494.4215" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8125" Y="0.9183" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Node/level_animation/l7_gw.csd" Plist="" />
+            <PrePosition X="0.4088" Y="0.8240" />
+            <PreSize X="0.0508" Y="0.0867" />
+            <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_1_2" ActionTag="1054047268" Tag="542" IconVisible="False" LeftMargin="971.9518" RightMargin="0.0482" TopMargin="66.0511" BottomMargin="481.9489" ctype="SpriteObjectData">
+            <Size X="52.0000" Y="52.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="997.9518" Y="507.9489" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.9746" Y="0.8466" />
+            <PreSize X="0.0508" Y="0.0867" />
+            <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Button_1_3" ActionTag="1182034908" Tag="543" IconVisible="False" LeftMargin="874.4536" RightMargin="97.5464" TopMargin="68.5509" BottomMargin="479.4491" ctype="SpriteObjectData">
+            <Size X="52.0000" Y="52.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="900.4536" Y="505.4491" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8793" Y="0.8424" />
+            <PreSize X="0.0508" Y="0.0867" />
+            <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

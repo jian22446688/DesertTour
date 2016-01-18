@@ -26,6 +26,8 @@ class Level_7 : public cocos2d::Layer
 private:
     
     class MainUI* mainui;
+    cocos2d::Sprite* gound_7;
+    cocos2d::Sprite* gound_11;
     
 public:
     
@@ -36,6 +38,9 @@ public:
     
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
+    
+    virtual void update(float ft);
+    
     
     // implement the "static create()" method manually
     CREATE_FUNC(Level_7);

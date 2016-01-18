@@ -134,7 +134,7 @@
 		4A236FD21C2E359500B5A496 /* Level_6.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Level_6.hpp; sourceTree = "<group>"; };
 		4A236FD51C2E35A100B5A496 /* Level_7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Level_7.cpp; sourceTree = "<group>"; };
 		4A236FD61C2E35A100B5A496 /* Level_7.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Level_7.hpp; sourceTree = "<group>"; };
-		4A236FD91C2E35B500B5A496 /* Level_8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Level_8.cpp; sourceTree = "<group>"; };
+		4A236FD91C2E35B500B5A496 /* Level_8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Level_8.cpp; sourceTree = "<group>"; };
 		4A236FDA1C2E35B500B5A496 /* Level_8.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Level_8.hpp; sourceTree = "<group>"; };
 		4A236FDD1C2E35C000B5A496 /* Level_9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Level_9.cpp; sourceTree = "<group>"; };
 		4A236FDE1C2E35C000B5A496 /* Level_9.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Level_9.hpp; sourceTree = "<group>"; };

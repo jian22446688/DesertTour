@@ -94,52 +94,6 @@ public:
 };
 
 
-/** 车变换位置
- *  @2015/01/14 10:22
- */
-class CarChangePosition : public cocos2d::Sprite
-{
-private:
-    
-    class MainCar_R* _car_r;
-    
-    Node* _pos;
-    
-public:
-    
-    typedef std::function<void()> cllback;
-    
-    virtual bool init();
-    
-    /** 车变换位置
-     *  @2015/01/14 10:22
-     */
-    void setObj(Node* obj);
-    
-    /** 设置车和车的位置
-     *  @2015/01/14 10:22
-     */
-    void setChangePosition(MainCar_R* car_r, Node* obj);
-    
-    /** 碰撞进入事件
-     *  @2015/01/14 10:22
-     */
-    virtual bool onCollisionBegin(const cocos2d::PhysicsContact& contace);
-    
-    /** 碰撞进入回调事件
-     *  @2015/01/14 11:22
-     */
-    virtual void addEvent(const cllback& clbak);
-    
-    
-    CREATE_FUNC(CarChangePosition);
-    
-    cllback _cbk;
-    
-};
-
-
-
 
 
 

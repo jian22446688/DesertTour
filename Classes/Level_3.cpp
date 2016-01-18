@@ -204,7 +204,7 @@ bool Level_3::init()
     Sprite* dbom = root_level_3->getChildByName<Sprite*>("btn_dicar0001_86_0");
     Btn_Ground_1* dbm = Btn_Ground_1::create();
     dbm->setObj(dbom);
-    dbm->IsBtnEnable(true);
+    //dbm->IsBtnEnable(true);
     addChild(dbm);
     
     //地雷的按钮

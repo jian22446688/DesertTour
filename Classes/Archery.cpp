@@ -66,19 +66,18 @@ void Archery::setObj(Sprite* obj)
  */
 bool Archery::onCollisionBegin(const cocos2d::PhysicsContact& contact)
 {
-    
     PhysicsBody* bodyA = contact.getShapeA()->getBody();
     PhysicsBody* bodyB = contact.getShapeB()->getBody();
     
     PhysicsBody* body = this->getPhysicsBody();
     if(body == bodyA || body == bodyB)
     {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("AudioAssets/audio_home/audio_adcka.mp3");
         ParticleSystemQuad* par = ParticleSystemQuad::create("Effect/archEffect.plist");
         par->setPosition(Vec2(this->getPositionX()-30, this->getPositionY()));
         this->getParent()->addChild(par);
         this->removeFromParent();
     }
-    
     return true;
 }
 

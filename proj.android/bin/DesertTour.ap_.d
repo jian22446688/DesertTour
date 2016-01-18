@@ -110,7 +110,10 @@
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_level \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_adc.mp3 \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_adc_sl.mp3 \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_adcka.mp3 \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_bg.mp3 \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_gameover.mp3 \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_gamewin.mp3 \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/audio_spring.mp3 \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_home/gone.wav \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/AudioAssets/audio_level/l2_bome.mp3 \
@@ -460,6 +463,8 @@
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_mainui_restart0002.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_mainui_tolevel0001.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_mainui_tolevel0002.png \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_next0001.png \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_next0002.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_rota0001.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/btn_rota0002.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/MainUI/img_fil.png \
@@ -482,6 +487,8 @@
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/selectlevel/img_selectstar.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/DesertUI/selectlevel/nober.png \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/Effect/archEffect.plist \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/Effect/fiame.plist \
+/Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/Effect/fire_1.plist \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/Effect/Radio.plist \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/LayerUI/btn_standard.csb \
 /Users/Cary/Documents/CocosProject/DesertTour/proj.android/assets/res/LayerUI/btn_UI_question.csb \

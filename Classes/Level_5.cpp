@@ -142,7 +142,7 @@ bool Level_5::init()
     mainui->setCar_R(maincar_r);
     maincar_r->setMainUI(mainui);
     maincar_r->setObj(carl5);
-    addChild(maincar_r);
+    addChild(maincar_r,10);
     addChild(mainui,3000);
     //退出
     Exit* eit = Exit::create();

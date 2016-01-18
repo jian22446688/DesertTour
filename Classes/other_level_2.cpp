@@ -70,10 +70,10 @@ bool Bombed::init()
     auto node = CSLoader::createNode("Node/animation/bomb.csb");
     addChild(node);
     
-//    brie = CSLoader::createNode("Node/level_animation/l2_gound.csb");
-//    brie->setPosition(Vec2(123,-198));
-//    addChild(brie);
-//    brie->setVisible(false);
+    //    brie = CSLoader::createNode("Node/level_animation/l2_gound.csb");
+    //    brie->setPosition(Vec2(123,-198));
+    //    addChild(brie);
+    //    brie->setVisible(false);
     
     Texture2D* tu = node->getChildByName<Sprite*>("sax0001_15")->getTexture();
     this->setTexture(tu);
@@ -162,7 +162,6 @@ bool Bombed::onCollisionBegin(const cocos2d::PhysicsContact& contact)
         bodyB = bodyA;
         bodyA = temp;
     }
-    
     if(bodyB->getTag() == 400008)
     {
         startBomb();
@@ -180,7 +179,8 @@ void Bombed::startBomb()
     }
     if (phybire !=NULL) {
         phybire->setVisible(false);
-        phybire->removeFromParent();
+        phybire->getPhysicsBody()->setEnabled(false);
+        //phybire->removeFromParent();
     }
     auto node = CSLoader::createTimeline("Node/animation/bomb.csb");
     node->gotoFrameAndPlay(0, 46, false);
@@ -188,7 +188,7 @@ void Bombed::startBomb()
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("AudioAssets/audio_level/l2_bome.mp3");
     
-    node->addFrameEndCallFunc(45, "a", [=]()
+    node->addFrameEndCallFunc(46, "a", [=]()
                               {
                                   this->removeFromParent();
                               });
@@ -210,7 +210,7 @@ bool Brigde::init()
     {
         return false;
     }
-   return true;
+    return true;
 }
 
 void Brigde::setObj(Sprite* obje)
@@ -294,14 +294,147 @@ void Monster::IsBtnEnable(bool isbtn)
 }
 
 
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+bool Scorpion_gw::init()
+{
+    if (!Sprite::init()) {
+        return false;
+    }
+    animNode = CSLoader::createNode("Node/level_animation/l7_gw.csb");
+    addChild(animNode);
+    guaiwu = CSLoader::createTimeline("Node/level_animation/l7_gw.csb");
+    ChangeStatus(ScorpionType::Walk);
+    this->setContentSize(Size(130, 60));
+    
+    PhysicsBody* phybody = PhysicsBody::createBox(this->getContentSize());
+    phybody->setPositionOffset(Vec2(-50, -130));
+    phybody->setTag(PHY_TAG_SCORPION);
+    phybody->setMass(3000);
+    phybody->setRotationEnable(false);
+    phybody->setCategoryBitmask(0x01);
+    phybody->setCollisionBitmask(0x02);
+    phybody->setContactTestBitmask(0x01);
+    phybody->setDynamic(true);
+    this->setPhysicsBody(phybody);
+    auto colsiionEvent = EventListenerPhysicsContact::create();
+    colsiionEvent->onContactBegin = CC_CALLBACK_1(Scorpion_gw::onCollisionBegin, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(colsiionEvent, this);
+    scheduleUpdate();
+    return true;
+}
+
+void Scorpion_gw::update(float ft)
+{
+    if (isMove){
+        if (iskeyl) {
+            if (this->getPositionX() > moveA.x){
+                this->setPositionX((this->getPositionX()-ft*Scorpion_gw::movespeed));
+            }else{
+                iskeyl = false;
+                iskeyr = true;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(80, -130));
+            }
+        }
+        if (iskeyr){
+            if (this->getPositionX() <moveB.x){
+                
+                this->setPositionX((this->getPositionX()+ft*Scorpion_gw::movespeed));
+            }else{
+                iskeyl = true;
+                iskeyr = false;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(-50, -130));
+            }
+        }
+    }
+}
+
+
+void Scorpion_gw::setObj(Node* obj)
+{
+    this->setPosition(Vec2(obj->getPosition().x, obj->getPosition().y+105.0f));
+    obj->setVisible(false);
+}
+
+void Scorpion_gw::setMovePosition(Node* objeA,Node* objeB ,float movespeed)
+{
+    isMove = true;
+    this->movespeed = movespeed;
+    moveA =objeA->getPosition();
+    moveB =objeB->getPosition();
+    objeA->setVisible(false);
+    objeB->setVisible(false);
+}
+
+/** 更换状态
+ *  @2015/01/15 09:40
+ */
+void Scorpion_gw::ChangeStatus(ScorpionType type)
+{
+    if (type == ScorpionType::Walk){
+        guaiwu->gotoFrameAndPlay(0, 25, true);
+        animNode->runAction(guaiwu);
+        isMove = true;
+    }else if (type == ScorpionType::Attack){
+        guaiwu->gotoFrameAndPlay(35, 65, false);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }else if (type == ScorpionType::Sleep){
+        guaiwu->gotoFrameAndPlay(70, 150, true);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }
+}
+
+/** 问题回答
+ *  @2015/01/15 09:40
+ */
+void Scorpion_gw::AnswerPassed(bool ispass)
+{
+    
+}
+
+/** 控制的按钮是否启用
+ *  @2015/01/15 09:40
+ */
+void Scorpion_gw::IsBtnEnable(bool isbtn)
+{
+    this->getPhysicsBody()->setEnabled(false);
+    ChangeStatus(ScorpionType::Sleep);
+}
+
+/** 碰撞开始事件
+ *  @2015/01/15 09:40
+ */
+bool Scorpion_gw::onCollisionBegin(const cocos2d::PhysicsContact& contact)
+{
+    PhysicsBody* bodyA = contact.getShapeA()->getBody();
+    PhysicsBody* bodyB = contact.getShapeB()->getBody();
+    PhysicsBody* bodythis = this->getPhysicsBody();
+    if (bodythis == bodyA || bodythis == bodyB)
+    {
+        if (bodyA->getTag() == PHY_TAG_MAINCAR || bodyB->getTag() == PHY_TAG_MAINCAR) {
+            ChangeStatus(ScorpionType::Attack);
+            log("Attack");
+        }
+    }
+    return true;
+}
 
 
 
 
-
-
-
-
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
 
 
 

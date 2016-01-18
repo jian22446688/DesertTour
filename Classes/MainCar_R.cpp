@@ -230,10 +230,21 @@ bool MainCar_R::onCollisionBegin(const cocos2d::PhysicsContact& contact)
             //碰到僵死了
             MainCar_R::kiLLCar_js();
         }
-        else if(bodyA->getTag() == 555565)
+        else if(bodyA->getTag() == PHY_TAG_SCORPION)
         {
-            //this->removeFromParent();
-            this->setObj(_chenge);
+            MainCar_R::StopCar();
+            maincarbody->setVisible(false);
+            mainwheel_x->setVisible(false);
+            mainwheel_d->setVisible(false);
+            maincarbody->getPhysicsBody()->setEnabled(false);
+            mainwheel_x->getPhysicsBody()->setEnabled(false);
+            mainwheel_d->getPhysicsBody()->setEnabled(false);
+            
+            schedule([=](float ft)
+                     {
+                         //游戏结束的动画
+                         getMainUI()->GameOverActionPlayed(true);
+                     }, 0.5f, "k");
         }
     }
     return true;
@@ -281,14 +292,11 @@ Node* MainCar_R::getCarBoty()
     return maincarbody;
 }
 
-
-
 void MainCar_R::setBodyEnable()
 {
     if (maincarbody->getPhysicsBody())
         maincarbody->getPhysicsBody()->setEnabled(false);
 }
-
 
 /** 设置主要UI实例
  *  @2015/12/23 15:40
@@ -315,10 +323,8 @@ void MainCar_R::setObj(Node* object)
     this->setAnchorPoint(Vec2(0, 0));
     maincarbody->setPosition(vec);
     object->setVisible(false);
-    
     mainwheel_d->setPosition(Vec2(maincarbody->getPosition().x-30,maincarbody->getPosition().y-28));
     mainwheel_x->setPosition(Vec2(maincarbody->getPosition().x+33,maincarbody->getPosition().y-38));
-    
 }
 
 /** 死亡动画

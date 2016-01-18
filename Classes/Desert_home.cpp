@@ -29,8 +29,10 @@ Scene* Desert_home::createScene()
     simpleaudio->preloadBackgroundMusic("AudioAssets/audio_home/audio_bg.mp3");
     simpleaudio->preloadEffect("AudioAssets/audio_home/gone.wav");
     simpleaudio->preloadEffect("AudioAssets/audio_home/audio_adc.mp3");
+    simpleaudio->preloadEffect("AudioAssets/audio_home/audio_adcka.mp3");
     simpleaudio->preloadEffect("AudioAssets/audio_home/audio_gamewin.mp3");
     simpleaudio->preloadEffect("AudioAssets/audio_home/audio_gameover.mp3");
+    
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     

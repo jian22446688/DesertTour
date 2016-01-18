@@ -2,7 +2,7 @@
   <PropertyGroup Name="l7_gw" Type="Node" ID="b077071a-8017-46b5-896e-da3e50efa805" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="100" Speed="1.0000">
+      <Animation Duration="150" Speed="1.0000">
         <Timeline ActionTag="-197612498" Property="FileData">
           <TextureFrame FrameIndex="0" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0001.png" Plist="" />
@@ -49,23 +49,38 @@
           <TextureFrame FrameIndex="70" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0015.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="75" Tween="False">
+          <TextureFrame FrameIndex="77" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0016.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="80" Tween="False">
+          <TextureFrame FrameIndex="84" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0017.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="85" Tween="False">
+          <TextureFrame FrameIndex="92" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0018.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="90" Tween="False">
+          <TextureFrame FrameIndex="99" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0019.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="95" Tween="False">
+          <TextureFrame FrameIndex="106" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0020.png" Plist="" />
           </TextureFrame>
-          <TextureFrame FrameIndex="100" Tween="False">
+          <TextureFrame FrameIndex="115" Tween="False">
             <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0021.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="123" Tween="False">
+            <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0020.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="129" Tween="False">
+            <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0019.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="135" Tween="False">
+            <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0018.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="141" Tween="False">
+            <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0017.png" Plist="" />
+          </TextureFrame>
+          <TextureFrame FrameIndex="150" Tween="False">
+            <TextureFile Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0016.png" Plist="" />
           </TextureFrame>
         </Timeline>
       </Animation>
@@ -80,7 +95,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0001.png" Plist="" />
+            <FileData Type="Normal" Path="DesertUI/Level/level_7/animation/anim_gw/gw0014.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
         </Children>

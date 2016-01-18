@@ -46,7 +46,7 @@
 //  400030      刚体     5关木乃伊
 //  400040      刚体     弓箭
 //  555565      刚体     车变换位置
-
+//  400050      刚体     蝎子的刚体
 
 
 
@@ -69,6 +69,7 @@
 #define PHY_TAG_KILL_L5         400030
 #define PHY_TAG_ARCHERY_L5      400040
 #define PHY_TAG_CARCHANGEPOS    555565
+#define PHY_TAG_SCORPION        400050
 
 /** 车加速
  *  @2015/12/14 20:30
@@ -308,11 +309,27 @@ public:
      */
     Node* masklayer;
     
+    /** 限制位置
+     *  @2015/01/15 14:16
+     */
+    Node* _nodePos;
+    
+    /** 限制位置
+     *  @2015/01/15 14:16
+     */
+    Node* _movePos;
+    
+    /** 是否移动
+     *  @2015/01/15 14:16
+     */
+    bool _ismove = false;
+    
+    
 public:
     
     virtual bool init();
     
-    
+    virtual void update(float ft);
     
     CREATE_FUNC(MainUI);
     
@@ -480,6 +497,10 @@ public:
      */
     bool isGameOver();
     
+    /** 获取是否死亡
+     *  @2015/01/15 14:28
+     */
+    void setMovePosition(Node* nodeA, Node* nodeB,bool ism = true);
     
 };
 

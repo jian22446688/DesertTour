@@ -268,11 +268,12 @@ bool Btn_Ground::onCollisionBegin(const cocos2d::PhysicsContact& contact)
     PhysicsBody* body = this->getPhysicsBody();
     if(body == bodyA || body == bodyB)
     {
-        this->setTexture("DesertUI/Level/level_2/btn_dicar0002.png");
-        if (_clickEventListener){
-            _clickEventListener();
+        if (isbtnopen) {
+            this->setTexture("DesertUI/Level/level_2/btn_dicar0002.png");
+            if (_clickEventListener){
+                _clickEventListener();
+            }
         }
-        
     }
     return true;
 }
@@ -375,9 +376,11 @@ bool Btn_Ground_1::onCollisionBegin(const cocos2d::PhysicsContact& contact)
     PhysicsBody* body = this->getPhysicsBody();
     if(body == bodyA || body == bodyB)
     {
-        this->setTexture("DesertUI/Level/level_2/btn_dicar0002.png");
-        if (_clickEventListener){
-            _clickEventListener();
+        if (isbtnopen) {
+            this->setTexture("DesertUI/Level/level_2/btn_dicar0002.png");
+            if (_clickEventListener){
+                _clickEventListener();
+            }
         }
     }
     return true;
