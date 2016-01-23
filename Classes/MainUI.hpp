@@ -47,8 +47,8 @@
 //  400040      刚体     弓箭
 //  555565      刚体     车变换位置
 //  400050      刚体     蝎子的刚体
-
-
+//  600050      刚体     冰块的刚体
+//  400060      刚体     守卫的刚体
 
 
 
@@ -70,7 +70,8 @@
 #define PHY_TAG_ARCHERY_L5      400040
 #define PHY_TAG_CARCHANGEPOS    555565
 #define PHY_TAG_SCORPION        400050
-
+#define PHY_TAG_ICE             600050
+#define PHY_TAG_GUARD           400060
 /** 车加速
  *  @2015/12/14 20:30
  */

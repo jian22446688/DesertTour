@@ -309,10 +309,9 @@ bool Scorpion_gw::init()
     addChild(animNode);
     guaiwu = CSLoader::createTimeline("Node/level_animation/l7_gw.csb");
     ChangeStatus(ScorpionType::Walk);
-    this->setContentSize(Size(130, 60));
-    
+    this->setContentSize(Size(60, 40));
     PhysicsBody* phybody = PhysicsBody::createBox(this->getContentSize());
-    phybody->setPositionOffset(Vec2(-50, -130));
+    phybody->setPositionOffset(Vec2(-40, -130));
     phybody->setTag(PHY_TAG_SCORPION);
     phybody->setMass(3000);
     phybody->setRotationEnable(false);
@@ -343,7 +342,6 @@ void Scorpion_gw::update(float ft)
         }
         if (iskeyr){
             if (this->getPositionX() <moveB.x){
-                
                 this->setPositionX((this->getPositionX()+ft*Scorpion_gw::movespeed));
             }else{
                 iskeyl = true;
@@ -354,7 +352,6 @@ void Scorpion_gw::update(float ft)
         }
     }
 }
-
 
 void Scorpion_gw::setObj(Node* obj)
 {
@@ -422,6 +419,140 @@ bool Scorpion_gw::onCollisionBegin(const cocos2d::PhysicsContact& contact)
         if (bodyA->getTag() == PHY_TAG_MAINCAR || bodyB->getTag() == PHY_TAG_MAINCAR) {
             ChangeStatus(ScorpionType::Attack);
             log("Attack");
+        }else if (bodyA->getTag() == PHY_TAG_ARCHERY_L5){
+            
+        }
+    }
+    return true;
+}
+
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+
+
+
+
+bool Guard_gu::init()
+{
+    if (!Sprite::init()) {
+        return false;
+    }
+    animNode = CSLoader::createNode("Node/level_animation/l9_guard.csb");
+    addChild(animNode);
+    guaiwu = CSLoader::createTimeline("Node/level_animation/l9_guard.csb");
+    ChangeStatus(ScorpionType::Walk);
+    this->setContentSize(Size(100.0f, 80.0f));
+    PhysicsBody* phybody = PhysicsBody::createBox(this->getContentSize());
+    phybody->setPositionOffset(Vec2(-50.0f, -40.0f));
+    phybody->setTag(PHY_TAG_GUARD);
+    phybody->setMass(3000);
+    phybody->setRotationEnable(false);
+    phybody->setCategoryBitmask(0x01);
+    phybody->setCollisionBitmask(0x02);
+    phybody->setContactTestBitmask(0x01);
+    phybody->setDynamic(true);
+    phybody->setGravityEnable(false);
+    this->setPhysicsBody(phybody);
+    auto colsiionEvent = EventListenerPhysicsContact::create();
+    colsiionEvent->onContactBegin = CC_CALLBACK_1(Guard_gu::onCollisionBegin, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(colsiionEvent, this);
+    scheduleUpdate();
+    return true;
+}
+
+void Guard_gu::update(float ft)
+{
+    if (isMove){
+        if (iskeyl) {
+            if (this->getPositionX() > moveA.x){
+                this->setPositionX((this->getPositionX()-ft*Guard_gu::movespeed));
+            }else{
+                iskeyl = false;
+                iskeyr = true;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(50.0f, -40.0f));
+            }
+        }
+        if (iskeyr){
+            if (this->getPositionX() <moveB.x){
+                this->setPositionX((this->getPositionX()+ft*Guard_gu::movespeed));
+            }else{
+                iskeyl = true;
+                iskeyr = false;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(-50.0f, -40.0f));
+            }
+        }
+    }
+}
+
+void Guard_gu::setObj(Node* obj)
+{
+    this->setPosition(Vec2(obj->getPosition().x, obj->getPosition().y));
+    obj->setVisible(false);
+}
+
+void Guard_gu::setMovePosition(Node* objeA,Node* objeB ,float movespeed)
+{
+    isMove = true;
+    this->movespeed = movespeed;
+    moveA =objeA->getPosition();
+    moveB =objeB->getPosition();
+    objeA->setVisible(false);
+    objeB->setVisible(false);
+}
+
+/** 更换状态
+ *  @2015/01/15 09:40
+ */
+void Guard_gu::ChangeStatus(ScorpionType type)
+{
+    if (type == ScorpionType::Walk){
+        guaiwu->play("walk", true);
+        animNode->runAction(guaiwu);
+        isMove = true;
+    }else if (type == ScorpionType::Attack){
+        guaiwu->play("attack", false);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }else if (type == ScorpionType::Sleep){
+        guaiwu->gotoFrameAndPlay(70, 150, true);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }
+}
+
+/** 碰撞开始事件
+ *  @2015/01/15 09:40
+ */
+bool Guard_gu::onCollisionBegin(const cocos2d::PhysicsContact& contact)
+{
+    PhysicsBody* bodyA = contact.getShapeA()->getBody();
+    PhysicsBody* bodyB = contact.getShapeB()->getBody();
+    PhysicsBody* bodythis = this->getPhysicsBody();
+    if (bodythis == bodyA || bodythis == bodyB)
+    {
+        if (bodyA->getTag() == PHY_TAG_MAINCAR || bodyB->getTag() == PHY_TAG_MAINCAR) {
+            ChangeStatus(ScorpionType::Attack);
+            
+            if (bodyA->getTag() == PHY_TAG_MAINCAR) {
+                guaiwu->addFrameEndCallFunc(65, "a", [=]()
+                                            {
+                                                bodyA->setVelocity(Vec2(-5000.0f, 1000.0f));
+                                            });
+            }
+            if (bodyB->getTag() == PHY_TAG_MAINCAR) {
+                guaiwu->addFrameEndCallFunc(65, "a", [=]()
+                                            {
+                                                bodyB->setVelocity(Vec2(-5000.0f, 1000.0f));
+                                            });
+            }
+            
+            log("Attack");
         }
     }
     return true;
@@ -440,18 +571,219 @@ bool Scorpion_gw::onCollisionBegin(const cocos2d::PhysicsContact& contact)
 
 
 
+bool Boos_gu::init()
+{
+    if (!Sprite::init()) {
+        return false;
+    }
+    animNode = CSLoader::createNode("Node/KillAnimaion/l10_boos.csb");
+    addChild(animNode);
+    //guaiwu = CSLoader::createTimeline("Node/KillAnimaion/l10_boos.csb");
+    //设置初始Hp
+    this->_initHp = getHp();
+    this->setContentSize(Size(200.0f, 120.0f));
+    _loadingShow = LoadingBar::create("DesertUI/home/loadingbar.png");
+    _loadingShow->setContentSize(Size(100.0f,20.0f));
+    _loadingShow->setPosition(Vec2(0, this->getContentSize().height / 2 + 40));
+    _loadingShow->setDirection(cocos2d::ui::LoadingBar::Direction::LEFT);
+    _loadingShow->setPercent(100);
+    addChild(_loadingShow,80);
+    _stext = Text::create();
+    _stext->setFontSize(13.0f);
+    _stext->setPosition(Vec2(0, this->getContentSize().height / 2 + 36));
+    _stext->setColor(Color3B(255, 255, 255));
+    _stext->setString("100000");
+    addChild(_stext,81);
+    ChangeStatus(ScorpionType::Walk);
+    PhysicsBody* phybody = PhysicsBody::createBox(this->getContentSize());
+    phybody->setPositionOffset(Vec2(-100.0f, -60.0f));
+    phybody->setTag(PHY_TAG_GUARD);
+    phybody->setMass(3000);
+    phybody->setRotationEnable(false);
+    phybody->setCategoryBitmask(0x01);
+    phybody->setCollisionBitmask(0x02);
+    phybody->setContactTestBitmask(0x01);
+    phybody->setDynamic(true);
+    phybody->setGravityEnable(false);
+    this->setPhysicsBody(phybody);
+    auto colsiionEvent = EventListenerPhysicsContact::create();
+    colsiionEvent->onContactBegin = CC_CALLBACK_1(Boos_gu::onCollisionBegin, this);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(colsiionEvent, this);
+    scheduleUpdate();
+    
+    return true;
+}
 
+void Boos_gu::update(float ft)
+{
+    if (isMove){
+        if (iskeyl) {
+            if (this->getPositionX() > moveA.x){
+                this->setPositionX((this->getPositionX()-ft*Boos_gu::movespeed));
+            }else{
+                iskeyl = false;
+                iskeyr = true;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(100.0f, -60.0f));
+                _stext->setScaleX(this->getScaleX());
+                _loadingShow->setScaleX(this->getScaleX());
+            }
+        }
+        if (iskeyr){
+            if (this->getPositionX() <moveB.x){
+                this->setPositionX((this->getPositionX()+ft*Boos_gu::movespeed));
+            }else{
+                iskeyl = true;
+                iskeyr = false;
+                this->setScaleX(-this->getScaleX());
+                this->getPhysicsBody()->setPositionOffset(Vec2(-100.0f, -60.0f));
+                _stext->setScaleX(this->getScaleX());
+                _loadingShow->setScaleX(this->getScaleX());
+            }
+        }
+    }
+    
+    //等待执行；
+    schedule([=](float ft)
+             {
+                 if (scotype != ScorpionType::Wait) {
+                     //ChangeStatus(ScorpionType::Wait);
+                 }
+                 
+                 schedule([=](float ft)
+                          {
+                              //ChangeStatus(ScorpionType::Walk);
+                          }, 3.0f, "a");
+                 //log("我执行了一次、、、、、、、、、、");
+             }, 6.0f, "a");
+}
 
+void Boos_gu::setObj(Node* obj)
+{
+    this->setPosition(Vec2(obj->getPosition().x, obj->getPosition().y));
+    obj->setVisible(false);
+}
 
+void Boos_gu::setMovePosition(Node* objeA,Node* objeB ,float movespeed)
+{
+    isMove = true;
+    this->movespeed = movespeed;
+    moveA =objeA->getPosition();
+    moveB =objeB->getPosition();
+    objeA->setVisible(false);
+    objeB->setVisible(false);
+}
 
+/** 更换状态
+ *  @2015/01/15 09:40
+ */
+void Boos_gu::ChangeStatus(ScorpionType type)
+{
+    scotype = type;
+    animNode->stopAllActions();
+    auto guaiwu = CSLoader::createTimeline("Node/KillAnimaion/l10_boos.csb");
+    if (type == ScorpionType::Walk){
+        guaiwu->gotoFrameAndPlay(160, 195, true);
+        //guaiwu->play("walk", true);
+        animNode->runAction(guaiwu);
+        isMove = true;
+    }else if (type == ScorpionType::Wait){
+        guaiwu->gotoFrameAndPlay(0, 35, true);
+        //guaiwu->play("wait", true);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }else if (type == ScorpionType::Attack){
+        guaiwu->gotoFrameAndPlay(40, 91, false);
+        //guaiwu->play("attack", false);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }else if (type == ScorpionType::Hurt){
+        guaiwu->gotoFrameAndPlay(100, 115, false);
+        //guaiwu->play("hurt", false);
+        animNode->runAction(guaiwu);
+        guaiwu->addFrameEndCallFunc(115, "a", [=](){ ChangeStatus(ScorpionType::Walk);   });
+        isMove = false;
+    }else if (type == ScorpionType::Kill){
+        guaiwu->gotoFrameAndPlay(120, 155, false);
+        //guaiwu->play("kill", false);
+        animNode->runAction(guaiwu);
+        isMove = false;
+    }
+}
 
+/** 碰撞开始事件
+ *  @2015/01/15 09:40
+ */
+bool Boos_gu::onCollisionBegin(const cocos2d::PhysicsContact& contact)
+{
+    PhysicsBody* bodyA = contact.getShapeA()->getBody();
+    PhysicsBody* bodyB = contact.getShapeB()->getBody();
+    PhysicsBody* bodythis = this->getPhysicsBody();
+    if (bodythis == bodyA || bodythis == bodyB)
+    {
+        if (bodyA->getTag() == PHY_TAG_ARCHERY_L5 || bodyB->getTag() == PHY_TAG_ARCHERY_L5) {
+            ChangeStatus(ScorpionType::Hurt);
+            if (getHp() > 0) {
+                Bullet* bu =  (Bullet*)bodyA->getNode();
+                setHp(getHp() - bu->getAttack());
+                ShowText(bu->getAttack());
+                float chp = getHp() / this->_initHp * 100.0f;
+                ShowLoading(chp);
+                if (getHp() <= 0) {
+                    _stext->setVisible(false);
+                    _loadingShow->setVisible(false);
+                    ChangeStatus(ScorpionType::Kill);
+                    log("死亡了。。。。。。。。。。");
+                }
+            }
+        }
+        if (bodyA->getTag() == PHY_TAG_MAINCAR || bodyB->getTag() == PHY_TAG_MAINCAR) {
+            ChangeStatus(ScorpionType::Attack);
+        }
+    }
+    return true;
+}
 
+/** 显示血文字
+ *  @2015/01/21 09:45
+ */
+void Boos_gu::ShowText(int str)
+{
+    char _s[20];
+    sprintf(_s, "%d",str);
+    auto  _showtext = Text::create();
+    _showtext->setContentSize(Size(100.0f,60.0f));
+    _showtext->setFontSize(22.0f);
+    _showtext->setColor(Color3B(255, 255, 255));
+    _showtext->setPosition(Vec2(0, this->getContentSize().height / 2 + 30));
+    _showtext->setOpacity(255);
+    _showtext->setString(_s);
+    this->addChild(_showtext,100);
+    auto fade = FadeTo::create(0.8f, 0);
+    auto moto = MoveTo::create(0.8f, Vec2(0, this->getContentSize().height / 2 + 110));
+    auto spawn = Spawn::create(fade,moto, NULL);
+    auto clack = CallFunc::create([=]()
+                                  {
+                                      _showtext->removeFromParent();
+                                  });
+    auto sequen = Sequence::create(spawn,clack, NULL);
+    _showtext->runAction(sequen);
+    
+    if (this->getScaleX() == -1) {
+        _showtext->setScaleX(this->getScaleX());
+    }
+}
 
-
-
-
-
-
+/** 显示血条
+ *  @2015/01/21 09:45
+ */
+void Boos_gu::ShowLoading(float str)
+{
+    char _s[20];
+    sprintf(_s, "%d",(int)getHp());
+    _stext->setString(_s);
+    _loadingShow->setPercent(str);
+}
 
 
 

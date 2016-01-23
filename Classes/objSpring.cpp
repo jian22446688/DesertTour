@@ -34,9 +34,10 @@ bool objSpring::init()
     
     auto tan = CSLoader::createNode("LayerUI/Other/Spring.csb");
     addChild(tan);
-    auto stan = tan->getChildByName<Sprite*>("tur0001_1");
+    stan = tan->getChildByName<Sprite*>("tur0001_1");
     PhysicsBody* phys = PhysicsBody::createBox(stan->getContentSize());
     phys->setTag(600001);
+    _phytag =600001;
     //设置触发 掩码
     phys->setCategoryBitmask(0x01);
     phys->setCollisionBitmask(0x02);
@@ -88,15 +89,14 @@ bool objSpring::onCollisionBegin(const cocos2d::PhysicsContact& contact)
     PhysicsBody* bodyA = contact.getShapeA()->getBody();
     PhysicsBody* bodyB = contact.getShapeB()->getBody();
     PhysicsBody* temp =nullptr;
-    log("弹簧  A:%d B:%d",bodyA->getTag(),bodyB->getTag());
-    if(bodyA->getTag() == 600001)
+    //log("A:%d B:%d",bodyA->getTag(),bodyB->getTag());
+    if(bodyA->getTag() == _phytag)
     {
         temp = bodyB;
         bodyB = bodyA;
         bodyA = temp;
     }
-    
-    if(bodyB->getTag() == 600001)
+    if(bodyB->getTag() == _phytag)
     {
         //log("A:%d",bodyA->getTag());
         //  100001     物理世界
@@ -155,29 +155,15 @@ void objSpring::onContactSeparate(const cocos2d::PhysicsContact& contact)
     PhysicsBody* bodyA = contact.getShapeA()->getBody();
     PhysicsBody* bodyB = contact.getShapeB()->getBody();
     PhysicsBody* temp =nullptr;
-    //log("A:%d B:%d",bodyA->getTag(),bodyB->getTag());
-    if(bodyA->getTag() == 600001)
+    if(bodyA->getTag() == _phytag)
     {
         temp = bodyB;
         bodyB = bodyA;
         bodyA = temp;
-        
     }
-    
-    
-    
-    if(bodyB->getTag() == 600001)
+    if(bodyB->getTag() == _phytag)
     {
-        
-        //log("A:%d",bodyA->getTag());
-        //  100001     物理世界
-        //  555555     主要车的
-        //  300001     悬浮的物体
-        //  400001     第一关的怪物
-        //  600001     弹簧的物体
-        
         objSpring::physisBody =nullptr;
-        
         switch (bodyA->getTag()) {
             case 555555:
                 objSpring::physisBody =nullptr;
@@ -185,11 +171,8 @@ void objSpring::onContactSeparate(const cocos2d::PhysicsContact& contact)
             case 400001:
                 objSpring::physisBody =nullptr;
                 break;
-                
             case 600001:
-                log("弹簧的物体");
                 break;
-                
             default:
                 break;
         }
@@ -204,6 +187,7 @@ void objSpring::onContactSeparate(const cocos2d::PhysicsContact& contact)
  */
 void objSpring::addForce(Vec2 force)
 {
+    log("aaaa %d",_phytag);
     auto td = CSLoader::createTimeline("LayerUI/Other/Spring.csb");
     td->gotoFrameAndPlay(0, 16, false);
     this->runAction(td);
@@ -233,7 +217,14 @@ void objSpring::setObjClear()
 
 }
 
-
+/** 设置刚体的属性
+ *  @2015/01/19 11:55
+ */
+void objSpring::setPhysicsTag(int tag)
+{
+    _phytag = tag;
+    stan->getPhysicsBody()->setTag(tag);
+}
 
 
 

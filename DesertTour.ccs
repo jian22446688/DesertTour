@@ -329,6 +329,48 @@
                 <Image Name="sfff0005.png" />
                 <Image Name="sfff0006.png" />
                 <Image Name="sfff0007.png" />
+                <Folder Name="anim">
+                  <Image Name="emo0001.png" />
+                  <Image Name="emo0002.png" />
+                  <Image Name="emo0003.png" />
+                  <Image Name="emo0004.png" />
+                  <Image Name="emo0005.png" />
+                  <Image Name="emo0006.png" />
+                  <Image Name="emo0007.png" />
+                  <Image Name="emo0008.png" />
+                  <Image Name="emo0009.png" />
+                  <Image Name="emo0010.png" />
+                  <Image Name="emo0011.png" />
+                  <Image Name="emo0012.png" />
+                  <Image Name="emo0013.png" />
+                  <Image Name="emo0014.png" />
+                  <Image Name="emo0015.png" />
+                  <Image Name="emo0016.png" />
+                  <Image Name="emo0017.png" />
+                  <Image Name="emo0018.png" />
+                  <Image Name="emo0019.png" />
+                  <Image Name="emo0020.png" />
+                  <Image Name="emo0021.png" />
+                  <Image Name="emo0022.png" />
+                  <Image Name="emo0023.png" />
+                  <Image Name="emo0024.png" />
+                  <Image Name="emo0025.png" />
+                  <Image Name="emo0026.png" />
+                  <Image Name="emo0027.png" />
+                  <Image Name="emo0028.png" />
+                  <Image Name="emo0029.png" />
+                  <Image Name="emo0030.png" />
+                  <Image Name="emo0031.png" />
+                  <Image Name="emo0032.png" />
+                  <Image Name="emo0033.png" />
+                  <Image Name="emo0034.png" />
+                  <Image Name="emo0035.png" />
+                  <Image Name="emo0036.png" />
+                  <Image Name="emo0037.png" />
+                  <Image Name="emo0038.png" />
+                  <Image Name="emo0039.png" />
+                  <Image Name="emo0040.png" />
+                </Folder>
               </Folder>
               <Image Name="l10_ground_1.png" />
               <Image Name="l10_ground_2.png" />
@@ -439,6 +481,8 @@
               <Image Name="l9_gound_5.png" />
               <Image Name="l9_gound_6.png" />
               <Image Name="l9_gound_7.png" />
+              <Image Name="bomb.png" />
+              <Image Name="bombbg.png" />
             </Folder>
           </Folder>
         </Folder>
@@ -457,6 +501,8 @@
             <Project Name="l2_gound.csd" Type="Node" />
             <Project Name="l5_updown.csd" Type="Node" />
             <Project Name="l7_gw.csd" Type="Node" />
+            <Project Name="l8_ice.csd" Type="Node" />
+            <Project Name="l9_guard.csd" Type="Node" />
           </Folder>
           <Folder Name="uianimtion">
             <Project Name="questionselect.csd" Type="Node" />
@@ -465,6 +511,8 @@
             <Project Name="L1_js.csd" Type="Node" />
             <Project Name="carfirekill.csd" Type="Node" />
             <Project Name="L5_upkill.csd" Type="Node" />
+            <Project Name="l10_boos.csd" Type="Node" />
+            <Project Name="l10_booss.csd" Type="Node" />
           </Folder>
         </Folder>
         <Folder Name="LayerUI">
@@ -554,6 +602,7 @@
           <PlistParticleFile Name="Radio.plist" />
           <PlistParticleFile Name="fiame.plist" />
           <PlistParticleFile Name="fire_1.plist" />
+          <PlistParticleFile Name="bomoeff.plist" />
         </Folder>
       </RootFolder>
     </Group>

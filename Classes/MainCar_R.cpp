@@ -96,11 +96,14 @@ void MainCar_R::onEnter()
     PhysicsWorld* phy_world = this->getScene()->getPhysicsWorld();
     PhysicsJointPin* phyjointpin_x = PhysicsJointPin::construct(mainwheel_x->getPhysicsBody(), maincarbody->getPhysicsBody(), Vec2(maincarbody->getPosition().x+33,maincarbody->getPosition().y-38));
     phyjointpin_x->setCollisionEnable(false);
+    phyjointpin_x->setMaxForce(100000000.0f * phy_mainwheel_x->getMass());
     phyjointpin_x->setEnable(true);
     
     PhysicsJointPin* phyjointpin_d = PhysicsJointPin::construct(mainwheel_d->getPhysicsBody(), maincarbody->getPhysicsBody(), Vec2(maincarbody->getPosition().x-30,maincarbody->getPosition().y-28));
     phyjointpin_d->setCollisionEnable(false);
+    phyjointpin_d->setMaxForce(10000000.0f * phy_mainwheel_d->getMass());
     phyjointpin_d->setEnable(true);
+
     phy_world->addJoint(phyjointpin_x);
     phy_world->addJoint(phyjointpin_d);
 }
@@ -182,7 +185,7 @@ bool MainCar_R::onCollisionBegin(const cocos2d::PhysicsContact& contact)
         {
             //游戏结束的动画
             getMainUI()->GameOverActionPlayed(true);
-            bodyB->getNode()->getParent()->getParent()->removeFromParent();
+            //bodyB->getNode()->getParent()->getParent()->removeFromParent();
         }
         else if(bodyA->getTag() == 666666)
         {
@@ -245,6 +248,21 @@ bool MainCar_R::onCollisionBegin(const cocos2d::PhysicsContact& contact)
                          //游戏结束的动画
                          getMainUI()->GameOverActionPlayed(true);
                      }, 0.5f, "k");
+        }
+        else if(bodyA->getTag() == PHY_TAG_GUARD)
+        {
+            MainCar_R::StopCar();
+            maincarbody->setVisible(false);
+            mainwheel_x->setVisible(false);
+            mainwheel_d->setVisible(false);
+            maincarbody->getPhysicsBody()->setEnabled(false);
+            mainwheel_x->getPhysicsBody()->setEnabled(false);
+            mainwheel_d->getPhysicsBody()->setEnabled(false);
+            schedule([=](float ft)
+                     {
+                         //游戏结束的动画
+                         getMainUI()->GameOverActionPlayed(true);
+                     }, 0.6f, "k");
         }
     }
     return true;

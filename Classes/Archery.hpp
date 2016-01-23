@@ -46,4 +46,63 @@ public:
     
 };
 
+class Bullet : public cocos2d::Sprite
+{
+private:
+    //速度
+    float _speed = 1000.0f;
+    //攻击力
+    int _attack = 3264;
+    
+public:
+    
+    virtual bool init();
+    
+    CREATE_FUNC(Bullet);
+    
+    /** 碰撞开始事件
+     *  @2015/01/21 10:54
+     */
+    bool onCollisionBegin(const cocos2d::PhysicsContact& contact);
+    
+    /** 设置攻击力
+     *  @2015/01/21 11:06
+     */
+    void setAttack(float att){
+        this->_attack = att;
+    }
+    
+    /** 获取攻击力
+     *  @2015/01/21 11:06
+     */
+    int getAttack(){
+        return this->_attack;
+    }
+    
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif /* Archery_hpp */

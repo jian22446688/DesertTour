@@ -70,13 +70,13 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_4/td5.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="FileNode_2" ActionTag="-1392242821" Tag="200" IconVisible="True" LeftMargin="143.9772" RightMargin="880.0228" TopMargin="139.9994" BottomMargin="460.0006" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="FileNode_2" ActionTag="-1392242821" Tag="200" IconVisible="True" LeftMargin="143.9771" RightMargin="880.0229" TopMargin="153.0665" BottomMargin="446.9335" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="143.9772" Y="460.0006" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <Position X="143.9771" Y="446.9335" />
+            <Scale ScaleX="0.8325" ScaleY="0.8325" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1406" Y="0.7667" />
+            <PrePosition X="0.1406" Y="0.7449" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Node/animation/L3_e.csd" Plist="" />
           </AbstractNodeData>
@@ -225,7 +225,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_010001_22_1" ActionTag="-1710870154" Tag="291" IconVisible="False" LeftMargin="390.2935" RightMargin="581.7064" TopMargin="539.9998" BottomMargin="8.0002" ctype="SpriteObjectData">
+          <AbstractNodeData Name="btn_010001_22_1" ActionTag="-1710870154" Tag="291" IconVisible="False" LeftMargin="390.2935" RightMargin="581.7065" TopMargin="539.9998" BottomMargin="8.0002" ctype="SpriteObjectData">
             <Size X="52.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="416.2935" Y="34.0002" />
@@ -280,7 +280,7 @@
             <FileData Type="Normal" Path="DesertUI/MainUI/img_maincarbody.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_010001_22_3" ActionTag="-37982300" Tag="211" IconVisible="False" LeftMargin="990.2484" RightMargin="-18.2483" TopMargin="407.1602" BottomMargin="140.8398" ctype="SpriteObjectData">
+          <AbstractNodeData Name="btn_010001_22_3" ActionTag="-37982300" Tag="211" IconVisible="False" LeftMargin="990.2484" RightMargin="-18.2484" TopMargin="407.1602" BottomMargin="140.8398" ctype="SpriteObjectData">
             <Size X="52.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1016.2484" Y="166.8398" />
@@ -291,7 +291,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_1/btn_010001.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_010001_22_4" ActionTag="1653439252" Tag="212" IconVisible="False" LeftMargin="-13.0578" RightMargin="985.0577" TopMargin="329.2859" BottomMargin="218.7141" ctype="SpriteObjectData">
+          <AbstractNodeData Name="btn_010001_22_4" ActionTag="1653439252" Tag="212" IconVisible="False" LeftMargin="-13.0578" RightMargin="985.0578" TopMargin="329.2859" BottomMargin="218.7141" ctype="SpriteObjectData">
             <Size X="52.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="12.9422" Y="244.7141" />

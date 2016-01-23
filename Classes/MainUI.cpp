@@ -115,7 +115,7 @@ void MainUI::onEnter()
     //设置问题框的位置
     MainUI::QuestionPage->setVisible(true);
     MainUI::QuestionPage->setPosition(Vec2(x, 840));
-
+    
     //游戏胜利的界面
     for (int i =0; i<5; i++) {
         MainUI::gamevictory_star[i]->setVisible(false);
@@ -134,8 +134,6 @@ void MainUI::update(float ft)
     if (_ismove) {
         if (getCar_R()->getCarNode()->getPosition().x >= _nodePos->getPosition().x) {
             getCar_R()->setObj(_movePos);
-            log(" UI 1-> UIX:%f UIY:%f",getCar_R()->getCarNode()->getPosition().x,getCar_R()->getCarNode()->getPosition().y);
-            log(" UI 2-> UIX:%f UIY:%f",_nodePos->getPosition().x,_nodePos->getPosition().y);
             _ismove = false;
         }
     }
@@ -204,46 +202,51 @@ void MainUI::onBtnClick(cocos2d::Ref *reft, Widget::TouchEventType type)
         }
         else if (btn_name->getName()==BTN_MAINUI_CARTURN)
         {
-            
-            if (MainUI::isMainCarTrun)
-            {
-                //转换车的走向
-                carSpeed_x = -carSpeed_x;
-                carSpeed_d = -carSpeed_d;
-                auto car_l = MainCar_L::create();
-                car_l->setMainUI(this);
-                car_l->setObj(getCar_R()->getCarNode());
-                setCar_L(car_l);
-                this->getParent()->addChild(car_l);
-                if (getCar_R()->isCarOpen()) {
-                    
-                    car_l->setCarSpeed(carSpeed_d, carSpeed_x, true);
-                }else{
-                    car_l->setCarSpeed(CAR_STOP,CAR_STOP, false);
-                }
-                //销毁当前的车
-                getCar_R()->removeFromParent();
-                //更换按钮的图片
-                btn_name->loadTextureNormal("DesertUI/MainUI/btn_rota0001.png");
+            if (this->getScene()->getName() == "level_7"
+                || this->getScene()->getName() == "level_8"
+                || this->getScene()->getName() == "level_10") {
+                MessageBox("当前不能变换车哦", "提示");
             }else{
-                //转换车的走向
-                carSpeed_x = -carSpeed_x;
-                carSpeed_d = -carSpeed_d;
-                //确定
-                auto car_r = MainCar_R::create();
-                car_r->setMainUI(this);
-                car_r->setObj(getCar_L()->getCarNode());
-                setCar_R(car_r);
-                this->getParent()->addChild(car_r);
-                if (getCar_L()->isCarOpen()) {
-                    car_r->setCarSpeed(carSpeed_d, carSpeed_x,true);
+                if (MainUI::isMainCarTrun)
+                {
+                    //转换车的走向
+                    carSpeed_x = -carSpeed_x;
+                    carSpeed_d = -carSpeed_d;
+                    auto car_l = MainCar_L::create();
+                    car_l->setMainUI(this);
+                    car_l->setObj(getCar_R()->getCarNode());
+                    setCar_L(car_l);
+                    this->getParent()->addChild(car_l);
+                    if (getCar_R()->isCarOpen()) {
+                        
+                        car_l->setCarSpeed(carSpeed_d, carSpeed_x, true);
+                    }else{
+                        car_l->setCarSpeed(CAR_STOP,CAR_STOP, false);
+                    }
+                    //销毁当前的车
+                    getCar_R()->removeFromParent();
+                    //更换按钮的图片
+                    btn_name->loadTextureNormal("DesertUI/MainUI/btn_rota0001.png");
                 }else{
-                    car_r->setCarSpeed(CAR_STOP,CAR_STOP,false);
+                    //转换车的走向
+                    carSpeed_x = -carSpeed_x;
+                    carSpeed_d = -carSpeed_d;
+                    //确定
+                    auto car_r = MainCar_R::create();
+                    car_r->setMainUI(this);
+                    car_r->setObj(getCar_L()->getCarNode());
+                    setCar_R(car_r);
+                    this->getParent()->addChild(car_r);
+                    if (getCar_L()->isCarOpen()) {
+                        car_r->setCarSpeed(carSpeed_d, carSpeed_x,true);
+                    }else{
+                        car_r->setCarSpeed(CAR_STOP,CAR_STOP,false);
+                    }
+                    //销毁当前的车
+                    getCar_L()->removeFromParent();
+                    //更换按钮的图片
+                    btn_name->loadTextureNormal("DesertUI/MainUI/btn_rota0002.png");
                 }
-                //销毁当前的车
-                getCar_L()->removeFromParent();
-                //更换按钮的图片
-                btn_name->loadTextureNormal("DesertUI/MainUI/btn_rota0002.png");
             }
         }
         else if (btn_name->getName()==BTN_MAINUI_ADDSPEED)
@@ -297,7 +300,7 @@ void MainUI::onCheckBoxSelect(Ref* reft, CheckBox::EventType type)
         if (checkbox->getName()==QUESTION_CHECKBOX_ANSWER_1)
         {
             MainUI::currentSelectAnswer = MainUI::text_answer_1->getString();
-          MainUI::isAnswerQuestion(checkbox);
+            MainUI::isAnswerQuestion(checkbox);
         }else if (checkbox->getName()==QUESTION_CHECKBOX_ANSWER_2){
             MainUI::currentSelectAnswer = MainUI::text_answer_2->getString();
             MainUI::isAnswerQuestion(checkbox);
@@ -347,7 +350,7 @@ void MainUI::onBtnClickSelectQuestion(Ref* reft,Widget::TouchEventType type)
     if (type==Widget::TouchEventType::ENDED)
     {
         CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("AudioAssets/audio_home/gone.wav");
-
+        
         //调用实例的控制按钮
         if (questionselect !=NULL)
         {
@@ -552,7 +555,7 @@ void MainUI::gameVictroy(std::string levelname)
  */
 void MainUI::QuestionFinish()
 {
-
+    
 }
 
 /** 游戏胜利 完成动作
@@ -652,6 +655,9 @@ void MainUI::gameVictroyNext(int& levelname)
             auto scenelevel = Desert_level::createScene();
             director->replaceScene(scenelevel);
         }
+    }else if (levelname==11){
+        auto scenelevel = Desert_level::createScene();
+        director->replaceScene(scenelevel);
     }
 }
 

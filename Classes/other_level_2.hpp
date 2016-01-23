@@ -14,6 +14,7 @@
 #include "IBtnControl.hpp"
 #include "cocos2d.h"
 #include "cocostudio/CocoStudio.h"
+#include "Archery.hpp"
 
 #include "ui/CocosGUI.h"
 using namespace cocos2d;
@@ -228,21 +229,194 @@ public:
      *  @2015/01/15 09:40
      */
     bool onCollisionBegin(const cocos2d::PhysicsContact& contact);
+};
+
+
+
+class L9_Lifting : public cocos2d::Sprite ,public IBtnControl
+{
+
+private:
     
+    bool _isopen = false;
     
+public:
+
+    virtual bool init(){
+        if (!Sprite::init()) {
+            return false;
+        }
+        this->setTexture("DesertUI/Level/level_9/l9_gound_3.png");
+        PhysicsBody* phys_1 = PhysicsBody::createBox(Size(this->getContentSize().width,this->getContentSize().height/15));
+        phys_1->setPositionOffset(Vec2(0.0f, -this->getContentSize().height/2+20-1));
+        phys_1->setDynamic(false);
+        this->setPhysicsBody(phys_1);
+        return true;
+    }
     
+    void setObj(Sprite* obj){
+        this->setPosition(obj->getPosition());
+        obj->setVisible(false);
+    }
     
+    CREATE_FUNC(L9_Lifting);
     
+    bool IsEn(){
+        return _isopen;
+    }
     
+    /** 问题回答
+     *  @2015/12/28 15:41
+     */
+    virtual void AnswerPassed(bool ispass){
     
+    }
     
-    
-    
-    
-    
+    /** 控制的按钮是否启用
+     *  @2015/12/28 15:41
+     */
+    virtual void IsBtnEnable(bool isbtn){
+        _isopen = true;
+    }
     
     
 };
+
+
+class Guard_gu : public cocos2d::Sprite
+{
+    enum ScorpionType{
+        Walk,
+        Attack,
+        Sleep,
+    };
+private:
+    
+    bool isMove = false;
+    float movespeed = 0;
+    ActionTimeline* guaiwu;
+    cocos2d::Vec2 moveA;
+    cocos2d::Vec2 moveB;
+    bool iskeyr = false;
+    bool iskeyl = true;
+    Node* animNode;
+    
+public:
+    
+    virtual bool init();
+    
+    CREATE_FUNC(Guard_gu);
+    
+    
+    virtual void update(float ft);
+    
+    void setObj(Node* obj);
+    
+    /** 设置移动范围
+     *  @2015/01/20 09:15
+     */
+    void setMovePosition(Node* objeA,Node* objeB,float movespeed);
+    
+    /** 碰撞开始事件
+     *  @2015/01/20 09:50
+     */
+    bool onCollisionBegin(const cocos2d::PhysicsContact& contact);
+    
+    /** 更换状态
+     *  @2015/01/15 09:40
+     */
+    void ChangeStatus(ScorpionType type);
+};
+
+
+
+
+
+class Boos_gu : public cocos2d::Sprite
+{
+    enum ScorpionType{
+        Walk,
+        Wait,
+        Attack,
+        Kill,
+        Hurt,
+        Sleep,
+    };
+private:
+    bool isMove = false;
+    float movespeed = 0;
+    ActionTimeline* guaiwu;
+    cocos2d::Vec2 moveA;
+    cocos2d::Vec2 moveB;
+    bool iskeyr = false;
+    bool iskeyl = true;
+    Node* animNode;
+    
+    float _initHp;
+    
+    float _hp = 100000.0f;
+    
+    Text* _stext;
+    LoadingBar* _loadingShow;
+    
+    ScorpionType scotype;
+    
+public:
+    virtual bool init();
+    
+    CREATE_FUNC(Boos_gu);
+    
+    virtual void update(float ft);
+    
+    void setObj(Node* obj);
+    
+    /** 设置移动范围
+     *  @2015/01/21 09:15
+     */
+    void setMovePosition(Node* objeA,Node* objeB,float movespeed);
+    
+    /** 碰撞开始事件
+     *  @2015/01/21 09:10
+     */
+    bool onCollisionBegin(const cocos2d::PhysicsContact& contact);
+    
+    /** 更换状态
+     *  @2015/01/21 09:45
+     */
+    void ChangeStatus(ScorpionType type);
+    
+    
+    /** 怪物的血
+     *  @2015/01/21 09:45
+     */
+    void setHp(float hp){
+        this->_hp = hp;
+    }
+    float getHp(){
+        return this->_hp;
+    }
+    
+    /** 显示血文字
+     *  @2015/01/21 09:45
+     */
+    void ShowText(int str);
+    
+    /** 显示血文字
+     *  @2015/01/21 09:45
+     */
+    void ShowLoading(float str);
+};
+
+
+
+
+
+
+
+
+
+
+
 
 
 

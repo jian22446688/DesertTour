@@ -28,6 +28,10 @@ private:
     
     cocos2d::PhysicsBody* physisBody = nullptr;
     
+    cocos2d::Sprite* stan;
+    
+    int _phytag;
+    
 public:
     
     
@@ -86,7 +90,10 @@ public:
      */
     void setObjClear();
     
-    
+    /** 设置刚体的属性
+     *  @2015/01/19 11:55
+     */
+    void setPhysicsTag(int tag);
   
     
     

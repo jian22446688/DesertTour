@@ -39,13 +39,13 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_6/gound_2.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="FileNode_2" ActionTag="158849635" Tag="1167" IconVisible="True" LeftMargin="153.9531" RightMargin="870.0469" TopMargin="409.3350" BottomMargin="190.6650" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="FileNode_2" ActionTag="158849635" Tag="1167" IconVisible="True" LeftMargin="153.9530" RightMargin="870.0470" TopMargin="419.3346" BottomMargin="180.6654" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="153.9531" Y="190.6650" />
-            <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+            <Position X="153.9530" Y="180.6654" />
+            <Scale ScaleX="-0.8016" ScaleY="0.8016" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1503" Y="0.3178" />
+            <PrePosition X="0.1503" Y="0.3011" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Node/animation/L3_e.csd" Plist="" />
           </AbstractNodeData>
@@ -71,7 +71,7 @@
             <FileData Type="Normal" Path="DesertUI/Level/level_6/gound_3.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="gound_6_6" ActionTag="-362328120" Tag="769" IconVisible="False" LeftMargin="259.8349" RightMargin="465.1650" TopMargin="216.8032" BottomMargin="308.1968" ctype="SpriteObjectData">
+          <AbstractNodeData Name="gound_6_6" ActionTag="-362328120" Tag="769" IconVisible="False" LeftMargin="259.8349" RightMargin="465.1651" TopMargin="216.8032" BottomMargin="308.1968" ctype="SpriteObjectData">
             <Size X="299.0000" Y="75.0000" />
             <AnchorPoint ScaleY="1.0000" />
             <Position X="259.8349" Y="383.1968" />
@@ -167,7 +167,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_3" ActionTag="984203068" Tag="1065" IconVisible="False" LeftMargin="336.5696" RightMargin="585.4304" TopMargin="536.6895" BottomMargin="0.3106" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="72" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_3" ActionTag="984203068" Tag="1065" IconVisible="False" LeftMargin="336.5696" RightMargin="585.4304" TopMargin="536.6894" BottomMargin="0.3106" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="72" Scale9Height="41" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="102.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="387.5696" Y="31.8106" />

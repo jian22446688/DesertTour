@@ -26,6 +26,8 @@ class Level_9 : public cocos2d::Layer
 private:
     
     class MainUI* mainui;
+    bool isopen = false;
+    bool keyup = true;
     
 public:
     
